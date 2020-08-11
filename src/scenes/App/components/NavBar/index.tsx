@@ -65,11 +65,11 @@ const NavBar = () => {
       <SideNavigation className="side-navigation">
         <Link to="/">
           <div className="logo-wrapper">
-            <img
-              className="logo"
-              src={logo}
-              alt={formatMessage('navBarRootLinkLogoAltText')}
-            />
+            {/*<img*/}
+            {/*  className="logo"*/}
+            {/*  src={logo}*/}
+            {/*  alt={formatMessage('navBarRootLinkLogoAltText')}*/}
+            {/*/>*/}
             <span>{formatMessage('appTitle')}</span>
           </div>
         </Link>

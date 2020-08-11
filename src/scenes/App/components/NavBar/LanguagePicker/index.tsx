@@ -10,6 +10,8 @@ import { GlobalState } from 'reducers';
 
 const getFlagIcon = (locale: string) => {
   switch (locale) {
+    case 'fr':
+      return '';
     case 'nb':
       return <NorwayIcon inline />;
     case 'en':
@@ -24,10 +26,12 @@ const getLocaleString = (locale: string): string => {
   switch (locale) {
     case 'en':
       return 'English';
+    case 'fr':
+      return 'Français';
     case 'nb':
       return 'Bokmål';
     default:
-      return 'Bokmål';
+      return 'Français';
   }
 };
 

@@ -50,7 +50,7 @@ const App = () => {
               <div className="header-and-routes">
                 <Loading
                   className="app-loader"
-                  text="Laster inn dataleverandører og organisasjoner..."
+                  text="Veuillez patienter pendant le chargement des données"
                   isLoading={!providers.providers || !organisations}
                 >
                   <Routes />

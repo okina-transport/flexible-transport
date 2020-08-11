@@ -25,8 +25,8 @@ type Props = {
 const PolygonMap = (props: Props) => {
   const [state, setState] = useState<State>({
     center: {
-      lat: 59.91,
-      lng: 10.76,
+      lat: 43.72,
+      lng: -1.05,
     },
     zoom: 14,
   });
