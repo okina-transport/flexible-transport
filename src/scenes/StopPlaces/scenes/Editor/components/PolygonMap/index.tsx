@@ -73,7 +73,7 @@ const PolygonMap = (props: Props) => {
       >
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=0d925ffb1c7f4fa29c090405b4038b96"
         />
         <Polygon ref={(e) => setPolygonRef(e)} positions={polygon} />
       </Map>

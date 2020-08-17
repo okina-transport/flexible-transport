@@ -38,11 +38,11 @@ export const loadNetworks = () => async (
   getState: () => GlobalState
 ) => {
   try {
-    const data = await UttuQuery(
+    const data = (await UttuQuery(
       getState().providers.active?.code ?? '',
       getNetworksQuery,
       {}
-    );
+    )) as { networks: Network[] };
     dispatch(receiveNetworksActionCreator(data.networks));
     return data.networks;
   } catch (e) {
@@ -65,11 +65,11 @@ export const loadNetworkById = (id: string) => async (
   getState: () => GlobalState
 ) => {
   try {
-    const data = await UttuQuery(
+    const data = (await UttuQuery(
       getState().providers.active?.code ?? '',
       getNetworkByIdQuery,
       { id }
-    );
+    )) as { network: Network };
     dispatch(receiveNetworkActionCreator(data.network));
   } catch (e) {
     dispatch(

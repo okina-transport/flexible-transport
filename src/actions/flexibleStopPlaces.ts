@@ -55,11 +55,11 @@ export const loadFlexibleStopPlaces = () => async (
   const intl = getIntl(getState());
 
   try {
-    const data = await UttuQuery(
+    const data = (await UttuQuery(
       activeProvider,
       getFlexibleStopPlacesQuery,
       {}
-    );
+    )) as { flexibleStopPlaces: FlexibleStopPlace[] };
     const flexibleStopPlaces = data.flexibleStopPlaces;
     dispatch(receiveFlexibleStopPlacesActionCreator(flexibleStopPlaces));
   } catch (e) {
@@ -86,11 +86,11 @@ export const loadFlexibleStopPlaceById = (id: string) => async (
   const intl = getIntl(getState());
 
   try {
-    const data = await UttuQuery(
+    const data = (await UttuQuery(
       activeProvider,
       getFlexibleStopPlaceByIdQuery,
       { id }
-    );
+    )) as { flexibleStopPlace: FlexibleStopPlace };
     dispatch(receiveFlexibleStopPlaceActionCreator(data.flexibleStopPlace));
   } catch (e) {
     dispatch(

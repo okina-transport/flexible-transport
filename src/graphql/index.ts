@@ -3,6 +3,7 @@ import { GraphQLClient } from 'graphql-request';
 import { API_BASE } from 'http/http';
 import token from 'http/token';
 import { Variables } from 'graphql-request/dist/src/types';
+import { Export } from '../model/Export';
 
 const staticHeaders = { 'ET-Client-Name': 'Entur - Flex editor' };
 

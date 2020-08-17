@@ -1,7 +1,7 @@
 import { UttuQuery } from 'graphql';
 import {
-  getFlexibleLineByIdQuery,
   getFixedLineByIdQuery,
+  getFlexibleLineByIdQuery,
   getLinesQuery,
 } from 'graphql/uttu/queries';
 import {
@@ -9,10 +9,10 @@ import {
   showSuccessNotification,
 } from 'actions/notification';
 import {
-  deleteFlexibleLine,
   deleteFixedLine,
-  flexibleLineMutation,
+  deleteFlexibleLine,
   fixedLineMutation,
+  flexibleLineMutation,
 } from 'graphql/uttu/mutations';
 import { getInternationalizedUttuError } from 'helpers/uttu';
 import { getIntl } from 'i18n';
@@ -60,10 +60,10 @@ export const loadFlexibleLines = () => async (
 ) => {
   try {
     const activeProvider = getState().providers.active?.code ?? '';
-    const { flexibleLines, fixedLines } = await UttuQuery(
+    const { flexibleLines, fixedLines } = (await UttuQuery(
       activeProvider,
       getLinesQuery
-    );
+    )) as { flexibleLines: FlexibleLine[]; fixedLines: FlexibleLine[] };
     dispatch(
       receiveFlexibleLinesActionCreator([...flexibleLines, ...fixedLines])
     );
@@ -91,13 +91,13 @@ export const loadFlexibleLineById = (
       ? getFlexibleLineByIdQuery
       : getFixedLineByIdQuery;
 
-    const { fixedLine, flexibleLine } = await UttuQuery(
+    const { fixedLine, flexibleLine } = (await UttuQuery(
       getState().providers.active?.code ?? '',
       queryById,
       {
         id,
       }
-    );
+    )) as { fixedLine: FlexibleLine; flexibleLine: FlexibleLine };
 
     dispatch(receiveFlexibleLineActionCreator(flexibleLine ?? fixedLine ?? {}));
   } catch (e) {

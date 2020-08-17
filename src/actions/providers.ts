@@ -29,7 +29,10 @@ export const setActiveProvider = (
 });
 
 export const getProviders = () => (dispatch: Dispatch<GlobalState>) => {
-  return UttuQuery('providers', getProvidersQuery, {})
+  let promise = UttuQuery('providers', getProvidersQuery, {}) as Promise<{
+    providers: Provider[];
+  }>;
+  return promise
     .then((data) => {
       dispatch(receiveProviders(data.providers));
       return Promise.resolve();

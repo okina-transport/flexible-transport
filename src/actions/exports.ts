@@ -45,9 +45,9 @@ export const loadExports = () => async (
   const intl = getIntl(getState());
 
   try {
-    const data = await UttuQuery(activeProvider, getExportsQuery, {
+    const data = (await UttuQuery(activeProvider, getExportsQuery, {
       historicDays: 30,
-    });
+    })) as { exports: Export[] };
     dispatch(receiveExportsActionCreator(data.exports));
   } catch (e) {
     dispatch(
@@ -71,7 +71,9 @@ export const loadExportById = (id: string) => async (
   const intl = getIntl(getState());
 
   try {
-    const data = await UttuQuery(activeProvider, getExportByIdQuery, { id });
+    const data = (await UttuQuery(activeProvider, getExportByIdQuery, {
+      id,
+    })) as { export: Export };
     dispatch(receiveExportActionCreator(data.export));
   } catch (e) {
     dispatch(

@@ -60,11 +60,11 @@ export default async function search(quayRef: string): Promise<QuaySearch> {
     quayRef,
   };
 
-  const data: null | SearchForQuayResponse = await StopPlacesQuery(
+  const data: null | SearchForQuayResponse = (await StopPlacesQuery(
     endpoint,
     query,
     variables
-  );
+  )) as { stopPlace: StopPlace[] };
   let foundQuay = undefined,
     foundStopPlace = undefined;
 
