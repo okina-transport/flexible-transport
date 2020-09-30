@@ -92,7 +92,7 @@
     "express": "4.16.2",
     "express-http-proxy": "^1.6.0",
     "fs-extra": "3.0.1",
-    "husky": "^3.1.0",
+    "husky": "^4.3.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.13.1",
     "prettier": "^2.0.2",
