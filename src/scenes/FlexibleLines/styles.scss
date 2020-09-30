@@ -1,0 +1,15 @@
+.flexible-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .buttons {
+    :first-child {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.new-flexible-line-button {
+  width: 17rem;
+}

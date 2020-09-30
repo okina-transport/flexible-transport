@@ -40,20 +40,20 @@ import GeoJSON, {
   stringIsValidCoordinates,
 } from 'model/GeoJSON';
 import { equals } from 'ramda';
-import { usePristine } from 'scenes/Lines/scenes/Editor/hooks';
+import usePristine from 'hooks/usePristine';
 import { getErrorFeedback } from 'helpers/errorHandling';
 import RequiredInputMarker from 'components/RequiredInputMarker';
 import { LeafletMouseEvent } from 'leaflet';
 
-// Show coordinates in GeoJson order [Long, Lat]
 const coordinatesToText = (polygonCoordinates: Coordinate[]): string =>
-  polygonCoordinates.length === 0
-    ? ''
-    : JSON.stringify(polygonCoordinates.map(([x, y]) => [y, x]));
+  JSON.stringify(polygonCoordinates);
 
-// Transform input coordinates from GeoJson order [Long, Lat] to [Lat, Long]
 const transformTextToCoordinates = (text: string): Coordinate[] =>
-  JSON.parse(text).map(([x, y]: Coordinate) => [y, x]);
+  JSON.parse(text);
+
+// Map expects coordinates in lat-lon order, whereas geojson has lon-lat
+const transformToMapCoordinates = (geojson: Coordinate[]): Coordinate[] =>
+  geojson.length === 0 ? geojson : geojson.map(([y, x]) => [x, y]);
 
 const FlexibleStopPlaceEditor = ({
   match,
@@ -140,10 +140,10 @@ const FlexibleStopPlaceEditor = ({
   }, [dispatch, history, flexibleStopPlace]);
 
   const handleMapOnClick = (e: LeafletMouseEvent) => {
-    const newCoordinates = addCoordinate(polygonCoordinates, [
-      e.latlng.lat,
-      e.latlng.lng,
-    ]);
+    // Convert coordinate from map to geojson long-lat order
+    const newCoordinate: Coordinate = [e.latlng.lng, e.latlng.lat];
+
+    const newCoordinates = addCoordinate(polygonCoordinates, newCoordinate);
     changePolygon({
       type: GEOMETRY_TYPE.POLYGON,
       coordinates: newCoordinates,
@@ -152,14 +152,9 @@ const FlexibleStopPlaceEditor = ({
   };
 
   const handleDrawPolygonClick = () => {
-    // Transform input coordinates from GeoJson order [Long, Lat] to [Lat, Long]
-    const coords = JSON.parse(
-      coordinatesToText(polygonCoordinates)
-    ).map(([x, y]: Coordinate) => [y, x]);
-
     changePolygon({
       type: GEOMETRY_TYPE.POLYGON,
-      coordinates: coords,
+      coordinates: polygonCoordinates,
     });
   };
 
@@ -175,6 +170,7 @@ const FlexibleStopPlaceEditor = ({
   const changeCoordinates = (coordinates: Coordinate[]) =>
     changePolygon({
       ...flexibleStopPlace?.flexibleArea?.polygon,
+      type: GEOMETRY_TYPE.POLYGON,
       coordinates,
     });
 
@@ -352,7 +348,7 @@ const FlexibleStopPlaceEditor = ({
                 )}
                 <PolygonMap
                   addCoordinate={handleMapOnClick}
-                  polygon={polygonCoordinates}
+                  polygon={transformToMapCoordinates(polygonCoordinates)}
                   undo={handleUndoClick}
                 />
               </div>

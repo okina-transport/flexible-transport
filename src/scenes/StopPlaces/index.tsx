@@ -127,8 +127,12 @@ const StopPlaces = ({ history }: RouteComponentProps) => {
                   setSelectedStopPlace(undefined);
                   setShowDeleteDialogue(false);
                 }}
-                title={formatMessage('editorDeleteConfirmationDialogTitle')}
-                message={formatMessage('editorDeleteConfirmationDialogMessage')}
+                title={formatMessage(
+                  'editorDeleteStopPlaceConfirmationDialogTitle'
+                )}
+                message={formatMessage(
+                  'editorDeleteStopPlaceConfirmationDialogMessage'
+                )}
                 buttons={[
                   <SecondaryButton
                     key="no"
@@ -137,7 +141,7 @@ const StopPlaces = ({ history }: RouteComponentProps) => {
                       setShowDeleteDialogue(false);
                     }}
                   >
-                    {formatMessage('tableNo')}
+                    {formatMessage('no')}
                   </SecondaryButton>,
                   <SuccessButton
                     key="yes"
@@ -152,7 +156,7 @@ const StopPlaces = ({ history }: RouteComponentProps) => {
                         .then(() => dispatch(loadFlexibleStopPlaces()));
                     }}
                   >
-                    {formatMessage('tableYes')}
+                    {formatMessage('yes')}
                   </SuccessButton>,
                 ]}
               />

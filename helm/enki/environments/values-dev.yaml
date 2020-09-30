@@ -1,0 +1,13 @@
+env: dev
+
+configMap:
+  authServerUrl: https://kc-dev.devstage.entur.io/auth
+  authClientId: enki
+  logForwardPaths: "true"
+  organisationsApiUrl: https://api.dev.entur.io/organisations/v1/register
+  publicUrl: /
+  uttuApiUrl: https://api.dev.entur.io/timetable-admin/v1/flexible-lines
+
+ingress:
+    enabled: true
+    devIp: 35.205.134.173

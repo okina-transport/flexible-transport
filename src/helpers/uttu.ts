@@ -4,6 +4,8 @@ import messages, {
   UttuSubCode,
 } from './uttu.messages';
 import { AppIntlState } from 'i18n';
+import { ApolloError, isApolloError } from '@apollo/client';
+import { sentryCaptureException } from 'store';
 
 type Extensions = {
   code: UttuCode;
@@ -11,13 +13,13 @@ type Extensions = {
   metaData: { [key: string]: object };
 };
 
-type UttuError = {
+interface UttuError extends Error {
   response:
     | undefined
     | {
         errors: { message?: string; extensions?: Extensions }[];
       };
-};
+}
 
 export const getUttuError = (e: UttuError) =>
   e.response?.errors?.[0]?.message ?? null;
@@ -33,9 +35,16 @@ export const getStyledUttuError = (
 
 export const getInternationalizedUttuError = (
   intl: AppIntlState,
-  e: UttuError
+  e: UttuError | ApolloError
 ) => {
-  const error = e.response?.errors?.[0];
+  let error;
+
+  if (isApolloError(e)) {
+    error = e.graphQLErrors[0];
+  } else {
+    error = e.response?.errors?.[0];
+  }
+
   if (error?.extensions?.code) {
     const { code, subCode } = error.extensions;
     const messageCode = (subCode ? `${code}_${subCode}` : code) as
@@ -44,8 +53,14 @@ export const getInternationalizedUttuError = (
 
     const errorMessage = messages[messageCode] ?? messages[UttuCode.UNKNOWN];
 
+    if (!messages[messageCode]) {
+      sentryCaptureException(e);
+    }
+
     return intl.formatMessage(errorMessage);
   }
 
-  return error?.message || intl.formatMessage(messages[UttuCode.UNKNOWN]);
+  sentryCaptureException(e);
+
+  return intl.formatMessage(messages[UttuCode.UNKNOWN]);
 };
