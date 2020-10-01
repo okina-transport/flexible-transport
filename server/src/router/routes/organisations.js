@@ -9,7 +9,7 @@ console.log(`Organisations proxy forwarding to ${apiUrl}`);
 
 router.use(
   '/organisations',
-  proxy([GET], () => '/organisations')
+  proxy([GET], () => '/organisations/1.0')
 );
 
 module.exports = router;
