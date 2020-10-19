@@ -16,12 +16,12 @@ export type OrganisationState = Organisation[] | null;
 export type Organisation = {
   id: string;
   name: string;
+  privateCode: string;
   legalName: string | null;
   types: ORGANISATION_TYPE[];
   contact: ContactInfo | null;
   customerContact: ContactInfo | null;
   logo: string | null;
-  references: { [key in string | number]: string };
   version: number;
 };
 
@@ -43,19 +43,11 @@ export const filterAuthorities = (
   activeProvider: Provider | null
 ) =>
   organisations.filter(
-    (org) =>
-      org.types.includes(ORGANISATION_TYPE.AUTHORITY) &&
-      org.references.netexAuthorityId &&
-      org.references.codeSpace === activeProvider?.codespace?.xmlns
+    (org) => org.privateCode === activeProvider?.codespace?.xmlns
   );
 
 export const filterNetexOperators = (
   organisations: Organisation[]
-): Organisation[] =>
-  organisations.filter(
-    (org) =>
-      org.types.includes(ORGANISATION_TYPE.OPERATOR) &&
-      org.references.netexOperatorId
-  );
+): Organisation[] => organisations.filter((org) => org);
 
 export default organisationsReducer;

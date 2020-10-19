@@ -390,6 +390,10 @@ export const messages = {
   networksAuthorityTableHeaderLabel: 'Autoritet',
   editorAuthorityLabelText: 'Autoritet *',
   editorCreateNetworkHeaderText: 'Opprett nettverk',
+  editorCreateNetworkSuccessMessageHeader: 'Network created',
+  editorCreateNetworkErrorMessageHeader: 'Error while saving network',
+  editorDeleteNetworkSuccessMessageHeader: 'Network successfully deleted',
+  editorDeleteNetworkErrorMessageHeader: 'Error while deleting network',
   editorNetworkDescription:
     'Minst ett nettverk er påkrevd. Nettverk kan brukes til å gruppere linjer.',
   editorValidationAuthority: 'Autoritet må velges',

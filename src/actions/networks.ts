@@ -10,6 +10,7 @@ import { Network } from 'model/Network';
 import { Dispatch } from 'redux';
 import { GlobalState } from 'reducers';
 import { sentryCaptureException } from 'store';
+import { getIntl } from '../i18n';
 
 export const REQUEST_NETWORKS = 'REQUEST_NETWORKS';
 export const RECEIVE_NETWORKS = 'RECEIVE_NETWORKS';
@@ -90,23 +91,25 @@ export const saveNetwork = (network: Network, showConfirm = true) => async (
   dispatch: Dispatch<GlobalState>,
   getState: () => GlobalState
 ) => {
+  const intl = getIntl(getState());
   try {
     await UttuQuery(getState().providers.active?.code ?? '', networkMutation, {
       input: network,
     });
     if (showConfirm) {
       dispatch(
-        showSuccessNotification('Lagre nettverk', 'Nettverket ble lagret.')
+        showSuccessNotification(
+          intl.formatMessage('editorCreateNetworkSuccessMessageHeader')
+        )
       );
     }
   } catch (e) {
     dispatch(
       showErrorNotification(
-        'Lagre nettverk',
+        intl.formatMessage('editorCreateNetworkHeaderText'),
         getStyledUttuError(
           e,
-          'En feil oppstod under lagringen av nettverket',
-          'Prøv igjen senere.'
+          intl.formatMessage('editorCreateNetworkHeaderText')
         )
       )
     );
@@ -118,6 +121,8 @@ export const deleteNetworkById = (id: string | undefined) => async (
   dispatch: Dispatch<GlobalState>,
   getState: () => GlobalState
 ) => {
+  const intl = getIntl(getState());
+
   if (!id) return;
 
   try {
@@ -125,7 +130,9 @@ export const deleteNetworkById = (id: string | undefined) => async (
       id,
     });
     dispatch(
-      showSuccessNotification('Slette nettverk', 'Nettverket ble slettet.')
+      showSuccessNotification(
+        intl.formatMessage('editorDeleteNetworkSuccessMessageHeader')
+      )
     );
   } catch (e) {
     dispatch(

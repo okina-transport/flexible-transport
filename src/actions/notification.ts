@@ -33,7 +33,7 @@ export const showNotification = (
 
 export const showSuccessNotification = (
   title: string,
-  message: string,
+  message: string = '',
   showModal?: boolean
 ) =>
   showNotification(

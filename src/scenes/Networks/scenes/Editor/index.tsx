@@ -128,8 +128,8 @@ const NetworkEditor = ({
       backButtonTitle={formatMessage('navBarNetworksMenuItemLabel')}
       title={
         match.params.id
-          ? formatMessage('editorEditNetworkHeaderText')
-          : formatMessage('editorCreateNetworkHeaderText')
+          ? formatMessage('editorCreateNetworkSuccessMessageHeader')
+          : formatMessage('editorCreateNetworkSuccessMessageHeader')
       }
     >
       <div className="network-editor">

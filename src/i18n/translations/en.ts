@@ -394,6 +394,10 @@ export const messages: MessagesKey = {
   networksAuthorityTableHeaderLabel: 'Authority',
   editorAuthorityLabelText: 'Authority *',
   editorCreateNetworkHeaderText: 'Create network',
+  editorCreateNetworkSuccessMessageHeader: 'Network created',
+  editorCreateNetworkErrorMessageHeader: 'Error while saving network',
+  editorDeleteNetworkSuccessMessageHeader: 'Network successfully deleted',
+  editorDeleteNetworkErrorMessageHeader: 'Error while deleting network',
   editorNetworkDescription:
     'At least one network is necessary. Networks can be used to group lines.',
   editorValidationAuthority: 'Authority is required',
