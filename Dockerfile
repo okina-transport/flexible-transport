@@ -1,6 +1,5 @@
 # Image de build UI
-#TODO : migrer vers un node plus récent
-FROM node:9.11.2-alpine as build
+FROM node:14.15.0-alpine3.12 as build
 
 WORKDIR /app
 
