@@ -20,7 +20,7 @@ export function quaySearchResults(
     };
   } else {
     return {
-      feedback: 'Fant ikke plattform.',
+      feedback: 'Impossible de trouver la plate-forme.',
       variant: 'warning',
     };
   }

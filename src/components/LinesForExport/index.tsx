@@ -119,11 +119,11 @@ const mapLine = (
 
 const mapStatusToText = (status: string): string => {
   if (status === 'positive') {
-    return 'Available next 120 days';
+    return 'Disponible durant les 120 prochains jours';
   } else if (status === 'neutral') {
-    return 'Becomes unavailable in less than 120 days';
+    return 'Devient invalide dans moins de 120 jours';
   } else {
-    return 'No longer available';
+    return "N'est plus disponible";
   }
 };
 
