@@ -18,30 +18,30 @@ const FlexibleLineTypeDrawer = ({ open, onDismiss, title }: Props) => {
         {formatMessage('generalDrawer')}
       </header>
 
-      <section className="flexible-line-type-drawer">
-        <Heading4>fixed</Heading4>
-        {formatMessage('drawerFixed')}
-      </section>
+      {/*<section className="flexible-line-type-drawer">*/}
+      {/*  <Heading4>fixed</Heading4>*/}
+      {/*  {formatMessage('drawerFixed')}*/}
+      {/*</section>*/}
 
-      <section className="flexible-line-type-drawer">
-        <Heading4>mainRouteWithFlexibleEnds</Heading4>
-        {formatMessage('drawerMainRouteWithFlexibleEnds')}
-      </section>
+      {/*<section className="flexible-line-type-drawer">*/}
+      {/*  <Heading4>mainRouteWithFlexibleEnds</Heading4>*/}
+      {/*  {formatMessage('drawerMainRouteWithFlexibleEnds')}*/}
+      {/*</section>*/}
 
-      <section className="flexible-line-type-drawer">
-        <Heading4>fixedStopAreaWide</Heading4>
-        {formatMessage('drawerFixedStopAreaWide')}
-      </section>
+      {/*<section className="flexible-line-type-drawer">*/}
+      {/*  <Heading4>fixedStopAreaWide</Heading4>*/}
+      {/*  {formatMessage('drawerFixedStopAreaWide')}*/}
+      {/*</section>*/}
 
       <section className="flexible-line-type-drawer">
         <Heading4>flexibleAreasOnly</Heading4>
         {formatMessage('drawerFlexibleAreasOnly')}
       </section>
 
-      <section className="flexible-line-type-drawer">
-        <Heading4>hailAndRideSections</Heading4>
-        {formatMessage('drawerHailAndRideSections')}
-      </section>
+      {/*<section className="flexible-line-type-drawer">*/}
+      {/*  <Heading4>hailAndRideSections</Heading4>*/}
+      {/*  {formatMessage('drawerHailAndRideSections')}*/}
+      {/*</section>*/}
     </Drawer>
   );
 };

@@ -11,11 +11,11 @@ type Props = {
   undo: () => void;
 };
 
-const DEFAULT_ZOOM_LEVEL = 14;
+const DEFAULT_ZOOM_LEVEL = 6;
 
 const DEFAULT_CENTER = {
-  lat: 43.72,
-  lng: -1.05,
+  lat: 46.23,
+  lng: 2.21,
 };
 
 const PolygonMap = (props: Props) => {

@@ -245,7 +245,8 @@ const StopPointEditor = ({
           onDismiss={() => setDeleteDialogOpen(false)}
         />
       </div>
-      {flexibleLineType && (
+      {/*MHI désaction options résa JP*/}
+      {false && flexibleLineType && (
         <div>
           <BookingArrangementEditor
             trim

@@ -166,12 +166,12 @@ export const vehicleSubmodeMessages: Record<
 };
 
 export const FLEXIBLE_LINE_TYPE = Object.freeze({
-  FIXED: 'fixed',
-  MAIN_ROUTE_WITH_FLEXIBLE_ENDS: 'mainRouteWithFlexibleEnds',
-  FIXED_STOP_AREA_WIDE: 'fixedStopAreaWide',
+  // FIXED: 'fixed',
+  // MAIN_ROUTE_WITH_FLEXIBLE_ENDS: 'mainRouteWithFlexibleEnds',
+  // FIXED_STOP_AREA_WIDE: 'fixedStopAreaWide',
   FLEXIBLE_AREAS_ONLY: 'flexibleAreasOnly',
-  HAIL_AND_RIDE_SECTIONS: 'hailAndRideSections',
-  MIXED_FLEXIBLE: 'mixedFlexible',
+  // HAIL_AND_RIDE_SECTIONS: 'hailAndRideSections',
+  // MIXED_FLEXIBLE: 'mixedFlexible',
 });
 
 export enum DAY_OF_WEEK {

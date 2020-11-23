@@ -80,11 +80,12 @@ const NavBar = () => {
 
         <UserPreference />
 
-        <NavBarItem
-          text={formatMessage('navBarLinesMenuItemLabel')}
-          path="/lines"
-          setRedirect={setRedirect}
-        />
+        {/* MHI : désactivation menu TAD virtuel */}
+        {/*<NavBarItem*/}
+        {/*  text={formatMessage('navBarLinesMenuItemLabel')}*/}
+        {/*  path="/lines"*/}
+        {/*  setRedirect={setRedirect}*/}
+        {/*/>*/}
 
         <SideNavigationGroup
           defaultOpen
@@ -117,7 +118,7 @@ const NavBar = () => {
       </SideNavigation>
 
       <div className="bottom-chips">
-        <LanguagePicker />
+        {/*<LanguagePicker />*/}
         <LogoutChip />
       </div>
 

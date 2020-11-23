@@ -205,6 +205,7 @@ export default ({
               <Dropdown
                 className="flexible-line-type"
                 initialSelectedItem={getEnumInit(flexibleLineType)}
+                // initialSelectedItem={getEnumInit(FLEXIBLE_LINE_TYPE.FLEXIBLE_AREAS_ONLY)}
                 placeholder={formatMessage('defaultOption')}
                 items={mapEnumToItems(FLEXIBLE_LINE_TYPE)}
                 clearable

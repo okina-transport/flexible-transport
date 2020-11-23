@@ -176,7 +176,8 @@ const ServiceJourneyEditor = (props: Props) => {
           />
         </div>
 
-        {flexibleLineType && (
+        {/*MHI désactivation options résa course*/}
+        {false && flexibleLineType && (
           <BookingArrangementEditor
             trim
             bookingArrangement={serviceJourney.bookingArrangement}

@@ -14,11 +14,11 @@ export const bookingInfoAttachmentLabel = (
 ) => {
   switch (bookingInfoAttachmentType) {
     case BookingInfoAttachmentType.LINE:
-      return 'Line';
+      return 'Ligne';
     case BookingInfoAttachmentType.STOP_POINT_IN_JOURNEYPATTERN:
-      return 'Stop Point in Journey Pattern';
+      return 'Un point dans un itinéraire';
     case BookingInfoAttachmentType.SERVICE_JOURNEY:
-      return 'Service Journey';
+      return 'Une course';
     default:
       return '';
   }
