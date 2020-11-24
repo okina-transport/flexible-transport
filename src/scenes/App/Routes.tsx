@@ -20,7 +20,7 @@ const Routes = () => (
         exact
         path="/"
         render={() => {
-          return <Redirect to="/lines" />;
+          return <Redirect to="/flexible-lines" />;
         }}
       />
       <Route exact path="/networks" component={NetworksOverview} />
