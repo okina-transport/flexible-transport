@@ -185,7 +185,7 @@ export const messages: MessagesKey = {
   urlOrPhoneMustBeFilled: 'Au moins un téléphone doit être rempli',
   purchaseMomentAfterBoarding: 'Après la montée',
   purchaseMomentBeforeBoarding: 'Avant la montée',
-  purchaseMomentOnCheckOut: "A l'achat",
+  purchaseMomentOnCheckOut: 'A la descente',
   purchaseMomentOnReservation: 'A la réservation',
   paymentSelectionTitle: 'Paiement',
   bookingTimeSelectionTitle: 'Moment de la réservation',
