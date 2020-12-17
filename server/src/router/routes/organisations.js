@@ -3,7 +3,7 @@ const { forwardingProxy } = require('../../forwardingproxy');
 
 const router = require('express').Router();
 
-const apiUrl = process.env.ORGANISATIONS_API_URL || 'https://api.na.okina.fr/api/';
+const apiUrl = process.env.ORGANISATIONS_API_URL || 'https://tiamat-rmr.nouvelle-aquitaine.pro/api/';
 const proxy = forwardingProxy(apiUrl);
 console.log(`Organisations proxy forwarding to ${apiUrl}`);
 
