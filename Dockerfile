@@ -1,6 +1,9 @@
 # Image de build UI
 FROM node:14.15.0-alpine3.12 as build
 
+# Pour les healthcheck docker
+RUN apk --no-cache add curl
+
 WORKDIR /app
 
 # copy everything to current working directory
