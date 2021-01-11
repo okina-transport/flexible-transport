@@ -7,6 +7,7 @@ import { TertiaryButton } from '@entur/button';
 import DayTypeAssignment from 'model/DayTypeAssignment';
 import { removeElementByIndex, replaceElement } from 'helpers/arrays';
 import { DatePicker } from '@entur/datepicker';
+import fr from 'date-fns/locale/fr'; // the locale you want
 import { InputGroup } from '@entur/form';
 import OperatingPeriod from 'model/OperatingPeriod';
 import { getErrorFeedback } from 'helpers/errorHandling';
@@ -64,6 +65,7 @@ const DayTypeAssignmentsEditor = ({ dayTypeAssignments, onChange }: Props) => {
           <div key={uniqueKeys[index]} className="day-type-assignment">
             <InputGroup label={formatMessage('dayTypeEditorFromDate')}>
               <DatePicker
+                locale={fr}
                 selectedDate={moment(op.fromDate).toDate()}
                 onChange={(date: Date | null) =>
                   changeDay({ ...op, fromDate: dateJsToIso(date) }, index)
@@ -79,6 +81,7 @@ const DayTypeAssignmentsEditor = ({ dayTypeAssignments, onChange }: Props) => {
               )}
             >
               <DatePicker
+                locale={fr}
                 selectedDate={moment(op.toDate).toDate()}
                 onChange={(date: Date | null) =>
                   changeDay({ ...op, toDate: dateJsToIso(date) }, index)

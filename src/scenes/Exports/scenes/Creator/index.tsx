@@ -5,6 +5,7 @@ import moment from 'moment';
 import { SuccessButton } from '@entur/button';
 import { Checkbox, InputGroup, TextField } from '@entur/form';
 import { DatePicker } from '@entur/datepicker';
+import fr from 'date-fns/locale/fr'; // the locale you want
 import { dateToString } from 'helpers/dates';
 import { saveExport } from 'actions/exports';
 import OverlayLoader from 'components/OverlayLoader';
@@ -93,6 +94,7 @@ const ExportsCreator = ({ history }: RouteComponentProps) => {
         <div className="export-dates">
           <InputGroup label={formatMessage('exportCreatorFromDateFormLabel')}>
             <DatePicker
+              locale={fr}
               selectedDate={moment(theExport.fromDate).toDate()}
               onChange={(date: Date | null) => {
                 if (
@@ -120,6 +122,7 @@ const ExportsCreator = ({ history }: RouteComponentProps) => {
             )}
           >
             <DatePicker
+              locale={fr}
               selectedDate={moment(theExport.toDate).toDate()}
               onChange={(date: Date | null) => {
                 if (
