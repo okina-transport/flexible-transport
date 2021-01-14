@@ -34,7 +34,7 @@ const FlexibleLineTypeDrawer = ({ open, onDismiss, title }: Props) => {
       {/*</section>*/}
 
       <section className="flexible-line-type-drawer">
-        <Heading4>flexibleAreasOnly</Heading4>
+        <Heading4>{formatMessage('flexibleAreasOnly')}</Heading4>
         {formatMessage('drawerFlexibleAreasOnly')}
       </section>
 

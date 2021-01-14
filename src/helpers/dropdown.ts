@@ -43,10 +43,32 @@ export const getEnumInit = (
       }
     : null;
 
+export const getEnumInitWithi18n = (
+  init: string | undefined,
+  formatMessage: FormatMessage
+): NormalizedDropdownItemType | null => {
+  return init
+    ? {
+        value: init,
+        label: formatMessage(init as keyof MessagesKey),
+      }
+    : null;
+};
+
 export const mapEnumToItems = <E>(e: E): NormalizedDropdownItemType[] => [
   ...Object.values(e).map((type) => ({
     value: type,
     label: type,
+  })),
+];
+
+export const mapEnumToItemsWithi18nLabel = <E>(
+  e: E,
+  formatMessage: FormatMessage
+): NormalizedDropdownItemType[] => [
+  ...Object.values(e).map((type) => ({
+    value: type,
+    label: formatMessage(type),
   })),
 ];
 

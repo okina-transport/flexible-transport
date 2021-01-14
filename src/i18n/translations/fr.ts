@@ -63,7 +63,7 @@ export const messages: MessagesKey = {
   userMenuMenuItemTextLanguage: 'Language',
   userMenuMenuItemTextNorwegian: 'Norsk',
   languagePickerAriaLabel: 'Choose language',
-  navBarDataProvider: 'Choisissez le producteur de données',
+  navBarDataProvider: 'Organisation',
   redirectTitle: 'Modifications non sauvegardées !',
   redirectMessage:
     'Vous avez des modifications non enregistrées qui seront perdues si vous poursuivez. Souhaitez-vous quand même quitter cette page ?',
@@ -542,4 +542,5 @@ export const messages: MessagesKey = {
     "Last possible departure time can't be before initial departure time",
   copyServiceJourneyDialogMultipleSwitchLabel: 'Create multiple copies',
   copyServiceJourneyDialogIntervalLabel: 'Choose an interval',
+  flexibleAreasOnly: 'TAD Zonal',
 };

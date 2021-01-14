@@ -21,9 +21,9 @@ import JourneyPattern from 'model/JourneyPattern';
 import RequiredInputMarker from 'components/RequiredInputMarker';
 import { Network } from 'model/Network';
 import {
-  getEnumInit,
+  getEnumInitWithi18n,
   getInit,
-  mapEnumToItems,
+  mapEnumToItemsWithi18nLabel,
   mapToItems,
   mapVehicleModeAndLabelToItems,
   vehicleModeInit,
@@ -204,10 +204,15 @@ export default ({
             {
               <Dropdown
                 className="flexible-line-type"
-                initialSelectedItem={getEnumInit(flexibleLineType)}
-                // initialSelectedItem={getEnumInit(FLEXIBLE_LINE_TYPE.FLEXIBLE_AREAS_ONLY)}
+                initialSelectedItem={getEnumInitWithi18n(
+                  flexibleLineType,
+                  formatMessage
+                )}
                 placeholder={formatMessage('defaultOption')}
-                items={mapEnumToItems(FLEXIBLE_LINE_TYPE)}
+                items={mapEnumToItemsWithi18nLabel(
+                  FLEXIBLE_LINE_TYPE,
+                  formatMessage
+                )}
                 clearable
                 label={formatMessage('generalTypeFormGroupTitle')}
                 onChange={(element) => onFlexibleLineTypeChange(element?.value)}
