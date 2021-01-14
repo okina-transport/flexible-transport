@@ -14,7 +14,6 @@ import { GlobalState } from 'reducers';
 import logo from 'static/img/logo.png';
 import './styles.scss';
 import NavigateConfirmBox from 'components/ConfirmNavigationDialog';
-import LanguagePicker from './LanguagePicker';
 import LogoutChip from './LogoutChip';
 
 const isActive = (pathname: string, path: string) =>
@@ -69,11 +68,11 @@ const NavBar = () => {
       <SideNavigation className="side-navigation">
         <Link to="/">
           <div className="logo-wrapper">
-            {/*<img*/}
-            {/*  className="logo"*/}
-            {/*  src={logo}*/}
-            {/*  alt={formatMessage('navBarRootLinkLogoAltText')}*/}
-            {/*/>*/}
+            <img
+              className="logo"
+              src={logo}
+              alt={formatMessage('navBarRootLinkLogoAltText')}
+            />
             <span>{formatMessage('appTitle')}</span>
           </div>
         </Link>
