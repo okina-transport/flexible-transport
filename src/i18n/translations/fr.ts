@@ -196,7 +196,7 @@ export const messages: MessagesKey = {
   editorDeleteConfirmationDialogCancelButtonText: 'Non',
   editorDeleteConfirmationDialogConfirmButtonText: 'Oui',
   editorDeleteLineConfirmationDialogMessage:
-    'Are you sure you want to delete this line?',
+    'Etes-vous sur de vouloir supprimer cette offre ?',
   editorDeleteLineConfirmationDialogTitle: "Suppression d'une offre",
   editorDeleteLineLoadingText: "Suppression de l'offre...",
   editorDeleteStopPlaceConfirmationDialogMessage:
@@ -324,9 +324,9 @@ export const messages: MessagesKey = {
   navigationCancel: 'Abandonner',
   navigationPrevious: 'Précédent',
   linesHeader: 'Lignes',
-  labelForAlighting: 'For alighting',
-  labelForBoarding: 'For boarding',
-  labelForBoardingAndAlighting: 'Boarding and alighting',
+  labelForAlighting: 'Descente autorisée',
+  labelForBoarding: 'Montée autorisée',
+  labelForBoardingAndAlighting: 'Montée et descente autorisées',
   labelFrontText: 'Message girouette',
   labelFrontTextRequired: 'Message girouette *',
   labelBoarding: 'Montée/Descente',
