@@ -540,4 +540,7 @@ export const messages: MessagesKey = {
   copyServiceJourneyDialogMultipleSwitchLabel: 'Create multiple copies',
   copyServiceJourneyDialogIntervalLabel: 'Choose an interval',
   flexibleAreasOnly: 'Flexible areas only',
+  public: 'Public',
+  authorisedPublic: 'Authorized public',
+  staff: 'Staff',
 };

@@ -25,7 +25,12 @@ import {
 import Contact from 'model/Contact';
 import { Dropdown } from '@entur/dropdown';
 import { FilterChip } from '@entur/chip';
-import { getEnumInit, mapEnumToItems } from 'helpers/dropdown';
+import {
+  getEnumInit,
+  getEnumInitWithi18n,
+  mapEnumToItems,
+  mapEnumToItemsWithi18nLabel,
+} from 'helpers/dropdown';
 import DurationPicker from 'components/DurationPicker';
 import { TimeUnitPickerPosition } from 'components/TimeUnitPicker';
 import { GlobalState } from 'reducers';
@@ -180,9 +185,12 @@ export default (props: Props) => {
 
         <Dropdown
           label={formatMessage('bookingAccessSelectionTitle')}
-          initialSelectedItem={getEnumInit(bookingAccess)}
+          initialSelectedItem={getEnumInitWithi18n(
+            bookingAccess,
+            formatMessage
+          )}
           placeholder={formatMessage('defaultOption')}
-          items={mapEnumToItems(BOOKING_ACCESS)}
+          items={mapEnumToItemsWithi18nLabel(BOOKING_ACCESS, formatMessage)}
           clearable
           onChange={(e) =>
             onChange({

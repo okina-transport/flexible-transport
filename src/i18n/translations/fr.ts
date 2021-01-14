@@ -543,4 +543,7 @@ export const messages: MessagesKey = {
   copyServiceJourneyDialogMultipleSwitchLabel: 'Create multiple copies',
   copyServiceJourneyDialogIntervalLabel: 'Choose an interval',
   flexibleAreasOnly: 'TAD Zonal',
+  public: 'Tout public',
+  authorisedPublic: 'Public autorisé',
+  staff: 'Salariés',
 };

@@ -537,4 +537,7 @@ export const messages = {
   copyServiceJourneyDialogMultipleSwitchLabel: 'Lag flere kopier',
   copyServiceJourneyDialogIntervalLabel: 'Velg intervall',
   flexibleAreasOnly: 'Flexible areas only',
+  public: 'Public',
+  authorisedPublic: 'Authorized public',
+  staff: 'Staff',
 };
