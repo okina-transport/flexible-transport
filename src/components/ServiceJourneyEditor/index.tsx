@@ -10,10 +10,7 @@ import StopPoint from 'model/StopPoint';
 import { isBlank } from 'helpers/forms';
 import ConfirmDialog from 'components/ConfirmDialog';
 import DeleteActionChip from 'components/DeleteActionChip';
-import {
-  filterNetexOperators,
-  OrganisationState,
-} from 'reducers/organisations';
+import { filterNetexOperators } from 'reducers/organisations';
 import { NormalizedDropdownItemType } from '@entur/dropdown/dist/useNormalizedItems';
 import { GlobalState } from 'reducers';
 import ServiceJourney from 'model/ServiceJourney';
@@ -67,9 +64,11 @@ const ServiceJourneyEditor = (props: Props) => {
   );
   const [showDeleteDialog, setShowDeleteDialog] = useState<boolean>(false);
   const [showCopyDialog, setShowCopyDialog] = useState<boolean>(false);
-  const organisations = useSelector<GlobalState, OrganisationState>(
-    (state) => state.organisations
-  );
+  const {
+    organisations,
+    providers: { active: activeProvider },
+  } = useSelector<GlobalState, GlobalState>((s) => s);
+
   const { formatMessage } = useSelector(selectIntl);
 
   const handleOperatorSelectionChange = (
@@ -79,7 +78,7 @@ const ServiceJourneyEditor = (props: Props) => {
     setOperatorSelection(newOperatorSelection);
   };
 
-  const operators = filterNetexOperators(organisations ?? []);
+  const operators = filterNetexOperators(organisations ?? [], activeProvider);
 
   const onFieldChange = (
     field: keyof ServiceJourney,

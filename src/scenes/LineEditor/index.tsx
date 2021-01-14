@@ -148,7 +148,10 @@ export default () => {
               activeStep={activeStep}
               line={line!}
               changeLine={onChange}
-              operators={filterNetexOperators(organisations ?? [])}
+              operators={filterNetexOperators(
+                organisations ?? [],
+                providers.active
+              )}
               networks={networks || []}
               spoilPristine={nextClicked}
             />

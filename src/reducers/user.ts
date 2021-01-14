@@ -10,7 +10,7 @@ export type User = {
   givenName: string;
   email: string;
   username: string;
-  isAdmin: boolean;
+  flexibleOrgs: string[];
 };
 
 const userReducer = (state: UserState = {}, action: AnyAction): UserState => {

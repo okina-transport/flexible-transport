@@ -9,7 +9,9 @@ import { setActiveProvider } from 'actions/providers';
 import { GlobalState } from 'reducers';
 import { ProvidersState } from 'reducers/providers';
 import { RouteComponentProps } from 'react-router';
+
 import './styles.scss';
+import { User } from '../../../../../reducers/user';
 
 const UserPreference = ({ history }: RouteComponentProps) => {
   const { providers, active } = useSelector<GlobalState, ProvidersState>(
@@ -26,11 +28,19 @@ const UserPreference = ({ history }: RouteComponentProps) => {
     }
   };
 
+  const { flexibleOrgs } = useSelector<GlobalState, User>(
+    (state) => state.user as User
+  );
+
   const items = providers
-    ? providers.map((p) => ({
-        value: p.code ?? '',
-        label: p.name ?? '',
-      }))
+    ? providers
+        .filter((provider) => {
+          return flexibleOrgs.find((org) => org === provider.codespace?.xmlns);
+        })
+        .map((p) => ({
+          value: p.code ?? '',
+          label: p.name ?? '',
+        }))
     : [];
 
   return (

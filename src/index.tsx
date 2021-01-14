@@ -7,7 +7,7 @@ import App from 'scenes/App';
 import ErrorBoundary from 'components/ErrorBoundary';
 import { configureStore } from './store';
 import token from 'http/token';
-import { isAdmin } from 'helpers/tokenParser';
+import { getFlexibleOrgsForUser } from 'helpers/tokenParser';
 import { API_BASE } from 'http/http';
 
 import { User } from './reducers/user';
@@ -60,7 +60,7 @@ const initAuth = () => {
         // @ts-ignore
         username: kc.idTokenParsed.preferred_username,
         // @ts-ignore
-        isAdmin: isAdmin(kc.tokenParsed),
+        flexibleOrgs: getFlexibleOrgsForUser(kc.tokenParsed),
       };
       renderIndex(userInfo);
     } else {

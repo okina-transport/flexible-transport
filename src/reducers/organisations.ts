@@ -47,7 +47,11 @@ export const filterAuthorities = (
   );
 
 export const filterNetexOperators = (
-  organisations: Organisation[]
-): Organisation[] => organisations.filter((org) => org);
+  organisations: Organisation[],
+  activeProvider: Provider | null
+) =>
+  organisations.filter(
+    (org) => org.privateCode === activeProvider?.codespace?.xmlns
+  );
 
 export default organisationsReducer;

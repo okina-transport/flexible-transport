@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoadDependencies } from './hooks';
 import { RouteComponentProps } from 'react-router';
 import { MatchParams } from 'http/http';
-import { withRouter, useLocation } from 'react-router-dom';
+import { useLocation, withRouter } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIntl } from 'i18n';
 import FlexibleLineEditorSteps from './FlexibleLineEditorSteps';
@@ -192,16 +192,23 @@ const EditorFrame = (props: RouteComponentProps<MatchParams>) => {
               setShowConfirm={setShowConfirm}
               authoritiesMissing={authoritiesMissing}
             >
-              {(activeStep) => (
-                <FlexibleLineEditorSteps
-                  activeStep={activeStep}
-                  flexibleLine={line}
-                  changeFlexibleLine={onFlexibleLineChange}
-                  operators={filterNetexOperators(organisations ?? [])}
-                  networks={networks || []}
-                  spoilPristine={nextClicked}
-                />
-              )}
+              {(activeStep) => {
+                const operators = filterNetexOperators(
+                  organisations ?? [],
+                  providers.active
+                );
+
+                return (
+                  <FlexibleLineEditorSteps
+                    activeStep={activeStep}
+                    flexibleLine={line}
+                    changeFlexibleLine={onFlexibleLineChange}
+                    operators={operators}
+                    networks={networks || []}
+                    spoilPristine={nextClicked}
+                  />
+                );
+              }}
             </LineEditorStepper>
           </>
         </Loading>
