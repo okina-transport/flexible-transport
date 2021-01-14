@@ -13,7 +13,7 @@ export type User = {
   flexibleOrgs: string[];
 };
 
-const userReducer = (action: AnyAction, state: UserState = {}): UserState => {
+const userReducer = (state: UserState = {}, action: AnyAction): UserState => {
   switch (action.type) {
     default:
       return state;
