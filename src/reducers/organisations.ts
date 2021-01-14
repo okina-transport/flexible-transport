@@ -26,8 +26,8 @@ export type Organisation = {
 };
 
 const organisationsReducer = (
-  state: OrganisationState = null,
-  action: ReceiveOrganisations
+  action: ReceiveOrganisations,
+  state: OrganisationState = null
 ) => {
   switch (action.type) {
     case RECEIVE_ORGANISATIONS:
