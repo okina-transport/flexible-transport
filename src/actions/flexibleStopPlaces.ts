@@ -151,11 +151,11 @@ export const deleteFlexibleStopPlaceById = (id: string) => async (
       )
     );
   } catch (e) {
+    debugger;
     dispatch(
       showErrorNotification(
         intl.formatMessage('flexibleStopPlacesDeleteStopPlaceErrorHeader'),
-        intl.formatMessage(
-          'flexibleStopPlacesDeleteStopPlaceErrorMessage',
+        intl.formatMessage('flexibleStopPlacesDeleteStopPlaceErrorMessage',
           getInternationalizedUttuError(intl, e)
         )
       )

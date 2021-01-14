@@ -3,15 +3,15 @@ import { MessagesKey } from 'i18n/translations/translationKeys';
 export const messages: MessagesKey = {
   exportsLoadExportByIdErrorHeader: 'Charger un export',
   exportsLoadExportByIdErrorMessage:
-    "Une erreur est survenue durant le chargement de l'export: {details}",
+    'Une erreur est survenue durant le chargement de l\'export: {details}',
   exportsLoadExportsErrorHeader: 'Charger des exports',
   exportsLoadExportsErrorMessage:
-    "Une erreur est survenue lors du chargement de l'export : {details}",
-  exportsSaveExportErrorHeader: "Enregistrement de l'export",
+    'Une erreur est survenue lors du chargement de l\'export : {details}',
+  exportsSaveExportErrorHeader: 'Enregistrement de l\'export',
   exportsSaveExportErrorMessage:
-    "Une erreur est survenue lors de l'enregistrement de l'export : {details}",
-  exportsSaveExportSuccessHeader: "Enregistrement de l'export",
-  exportsSaveExportSuccessMessage: "L'export a été enregistré.",
+    'Une erreur est survenue lors de l\'enregistrement de l\'export : {details}',
+  exportsSaveExportSuccessHeader: 'Enregistrement de l\'export',
+  exportsSaveExportSuccessMessage: 'L\'export a été enregistré.',
   deleteLineErrorHeader: 'Suppression de la ligne',
   deleteLineErrorMessage:
     'Une erreur est survenue lorrs de la suppression de la ligne : {details}',
@@ -25,7 +25,7 @@ export const messages: MessagesKey = {
     'Une erreur est survenue lors du chargement des lignes : {details}',
   saveLineErrorHeader: 'Enregistrement de la ligne',
   saveLineErrorMessage:
-    "Une erreur est survenue lors de l'enregistrement de la ligne : {details}",
+    'Une erreur est survenue lors de l\'enregistrement de la ligne : {details}',
   saveLineSuccessHeader: 'Enregistrement de la ligne',
   saveLineSuccessMessage: 'La ligne a été enregistrée',
   modalSaveLineSuccessHeader: 'La ligne a été créée',
@@ -33,22 +33,21 @@ export const messages: MessagesKey = {
     'a été crée et enregistrée avec succès. Vous pouvez la visualiser ou la modifier dans le menu des lignes TAD.',
   flexibleLinesSaveLineSuccessButton: 'Ok',
   flexibleStopPlacesDeleteStopPlaceErrorHeader: 'Supprimer cette zone',
-  flexibleStopPlacesDeleteStopPlaceErrorMessage:
-    'Une erreur est survenue lors de la suppression de la zone : {details}',
-  flexibleStopPlacesDeleteStopPlaceSuccessHeader: "Suppression d'une zone",
+  flexibleStopPlacesDeleteStopPlaceErrorMessage: 'Une erreur est survenue lors de la suppression de la zone : {details}',
+  flexibleStopPlacesDeleteStopPlaceSuccessHeader: 'Suppression d\'une zone',
   flexibleStopPlacesDeleteStopPlaceSuccessMessage: 'La zone a été supprimée',
-  flexibleStopPlacesLoadStopPlaceErrorHeader: "Chargement d'une zone",
+  flexibleStopPlacesLoadStopPlaceErrorHeader: 'Chargement d\'une zone',
   flexibleStopPlacesLoadStopPlaceErrorMessage:
     'Une erreur est survenue lors du chargement de la zone : {details}',
-  flexibleStopPlacesLoadStopPlacesErrorHeader: "Chargement des points d'arrêts",
+  flexibleStopPlacesLoadStopPlacesErrorHeader: 'Chargement des points d\'arrêts',
   flexibleStopPlacesLoadStopPlacesErrorMessage:
-    "Une erreur est survenue en chargeant les points d'arrêts : {details}",
-  flexibleStopPlacesSaveStopPlaceErrorHeader: "Enregistrement du point d'arrêt",
+    'Une erreur est survenue en chargeant les points d\'arrêts : {details}',
+  flexibleStopPlacesSaveStopPlaceErrorHeader: 'Enregistrement du point d\'arrêt',
   flexibleStopPlacesSaveStopPlaceErrorMessage:
-    "Une erreur est survenue lors de la sauvegarde du point d'arrêt: {details}",
+    'Une erreur est survenue lors de la sauvegarde du point d\'arrêt: {details}',
   flexibleStopPlacesSaveStopPlaceSuccessHeader:
-    "Enregistrement du point d'arrêt",
-  flexibleStopPlacesSaveStopPlaceSuccessMessage: "L'arrêt a été enregistré",
+    'Enregistrement du point d\'arrêt',
+  flexibleStopPlacesSaveStopPlaceSuccessMessage: 'L\'arrêt a été enregistré',
   navBarIntroduction: 'Introduction',
   navBarExportsMenuItemLabel: 'Exports',
   navBarLinesMenuItemLabel: 'Lignes TAD',
@@ -57,7 +56,7 @@ export const messages: MessagesKey = {
   navBarNetworksMenuItemLabel: 'Réseaux',
   navBarRootLinkLogoAltText: 'Logo',
   navBarRootLinkText: '',
-  navBarStopPlacesMenuItemLabel: "Zones d'arrêt ",
+  navBarStopPlacesMenuItemLabel: 'Zones d\'arrêt ',
   userMenuLogoutLinkText: 'Déconnecter',
   userMenuMenuItemTextEnglish: 'English',
   userMenuMenuItemTextLanguage: 'Langue',
@@ -71,15 +70,15 @@ export const messages: MessagesKey = {
   redirectNo: 'Non, rester sur cette page',
   appTitle: 'Editeur TAD',
   exportsCreateExportButtonLabel: 'Créer un export',
-  exportCreatorDryRunFormLabel: "Export d'essai",
+  exportCreatorDryRunFormLabel: 'Export d\'essai',
   exportCreatorDryRunFormLabelTooltip:
-    "Crée un fichier NeTeX sans réellement l'exporter, pour tester l'export",
+    'Crée un fichier NeTeX sans réellement l\'exporter, pour tester l\'export',
   exportCreatorFromDateFormLabel: 'Date de début *',
   exportCreatorHeader: 'Créer un export',
   exportCreatorDescription: 'Exportez les services TAD au format Netex',
-  exportCreatorNameFormLabel: "Nom de l'export *",
-  exportCreatorSaveButtonLabelText: "Créer l'export",
-  exportCreatorSavingOverlayLoaderText: "Sauvegarde de l'export...",
+  exportCreatorNameFormLabel: 'Nom de l\'export *',
+  exportCreatorSaveButtonLabelText: 'Créer l\'export',
+  exportCreatorSavingOverlayLoaderText: 'Sauvegarde de l\'export...',
   exportCreatorToDateFormLabel: 'Date de fin *',
   exportCreatorDateForExport: 'Période à exporter',
   exportCreatorDateForExportDesc:
@@ -110,13 +109,13 @@ export const messages: MessagesKey = {
   viewerDryRunNo: 'Non',
   viewerDryRunYes: 'Oui',
   NO_VALID_FLEXIBLE_LINES_IN_DATA_SPACE:
-    "Pas de lignes TAD valides dans l'espace de données",
+    'Pas de lignes TAD valides dans l\'espace de données',
   failed: 'Echec',
   in_progress: 'En cours',
   success: 'Succès',
   viewerFromDateLabel: 'Date de début',
   viewerHeader: 'Export',
-  viewerLoadingText: "Chargement de l'export...",
+  viewerLoadingText: 'Chargement de l\'export...',
   viewerMessagesLabel: 'Messages',
   viewerNameLabel: 'Nom',
   viewerStatusLabel: 'Statut',
@@ -127,9 +126,8 @@ export const messages: MessagesKey = {
   uttuErrorCONSTRAINT_VIOLATION_LINE_UNIQUE_NAME:
     'La ligne TAD doit avoir un nom unique',
   uttuErrorCONSTRAINT_VIOLATION_JOURNEY_PATTERN_UNIQUE_NAME:
-    "L'itinéraire doit avoir un nom unique",
-  uttuErrorENTITY_IS_REFERENCED:
-    'L{objet ne put pas être effacé car {noOfLines, number} autres {noOfLines, plural, one {entity ont une référence} autre {entities a une référence}} vers lui.',
+    'L\'itinéraire doit avoir un nom unique',
+  uttuErrorENTITY_IS_REFERENCED:'L\'objet ne peut pas être effacé car d\'autres objets le référencent.',
   uttuErrorFROM_DATE_AFTER_TO_DATE:
     'La date de début ne peut être ultérieure à la date de fin',
   uttuErrorMINIMUM_POINTS_IN_SEQUENCE:
@@ -153,7 +151,7 @@ export const messages: MessagesKey = {
   bookingInfoCancelButtonText: 'Abandonner',
   bookingInfoText: 'Informations concernant la réservation de la course.',
   bookingLabel:
-    "Pour faciliter les réservations, nous recommandons de renseigner le téléphone, URL, et notice d'information.",
+    'Pour faciliter les réservations, nous recommandons de renseigner le téléphone, URL, et notice d\'information.',
   bookingAccessAuthorisedPublic: 'Public autorisé',
   bookingAccessPublic: 'Public',
   bookingAccessStaff: 'Equipe',
@@ -165,15 +163,15 @@ export const messages: MessagesKey = {
     'Heure maximum de réservation',
   bookingLimitFieldsHeaderLabel: 'Heure limite de réservation',
   bookingMethodCallDriver: 'Appeler le chauffer',
-  bookingMethodCallOffice: "Appeler l'agence",
+  bookingMethodCallOffice: 'Appeler l\'agence',
   bookingMethodOnline: 'En ligne',
-  bookingMethodPhoneAtStop: "Téléphone à l'arrêt",
+  bookingMethodPhoneAtStop: 'Téléphone à l\'arrêt',
   bookingMethodText: 'SMS',
   bookingMethodSelectionTitle: 'Moyen de réservation',
-  bookingNoteFieldTitle: "Notice d'information",
-  bookingNoteRequiredFeedback: "La notice d'information est obligatoire",
+  bookingNoteFieldTitle: 'Notice d\'information',
+  bookingNoteRequiredFeedback: 'La notice d\'information est obligatoire',
   bookingNoteTooltip:
-    "Informations pouvant être présentées en complément du détail de l'itinéraire",
+    'Informations pouvant être présentées en complément du détail de l\'itinéraire',
   purchaseWhenAdvanceAndDayOfTravel: 'Advance and day of travel',
   purchaseWhenDayOfTravelOnly: 'Day of travel only',
   purchaseWhenTimeOfTravelOnly: 'Time of travel only',
@@ -198,8 +196,8 @@ export const messages: MessagesKey = {
   editorDeleteConfirmationDialogConfirmButtonText: 'Oui',
   editorDeleteLineConfirmationDialogMessage:
     'Etes-vous sur de vouloir supprimer cette offre ?',
-  editorDeleteLineConfirmationDialogTitle: "Suppression d'une offre",
-  editorDeleteLineLoadingText: "Suppression de l'offre...",
+  editorDeleteLineConfirmationDialogTitle: 'Suppression d\'une offre',
+  editorDeleteLineLoadingText: 'Suppression de l\'offre...',
   editorDeleteStopPlaceConfirmationDialogMessage:
     'Etes-vous sûr de vouloir supprimer cette zone ?',
   editorDeleteStopPlaceConfirmationDialogTitle: 'Supprimer cette zone',
@@ -226,13 +224,13 @@ export const messages: MessagesKey = {
   drawerAria: 'En savoir plus sur les différents types de lignes',
   generalDrawerTitle: 'Types de lignes TAD',
   drawerFixed:
-    "Itinéraire prédéfini, avec des horaires fixes. Doit être réservé à l'avance pour rouler.",
+    'Itinéraire prédéfini, avec des horaires fixes. Doit être réservé à l\'avance pour rouler.',
   drawerMainRouteWithFlexibleEnds:
-    "Itinéraire prédéfini, avec des horaires fixes, mais avec la possibilité de réserver une montée ou descente sur des points d'arrêts non compris dans l'itinéraire prédéfini",
+    'Itinéraire prédéfini, avec des horaires fixes, mais avec la possibilité de réserver une montée ou descente sur des points d\'arrêts non compris dans l\'itinéraire prédéfini',
   drawerFixedStopAreaWide:
-    "Itinéraire variable défini par une ou plusieurs zones d'arrêt, chaque zone pouvant avoir des arrêts prédéfinis.",
+    'Itinéraire variable défini par une ou plusieurs zones d\'arrêt, chaque zone pouvant avoir des arrêts prédéfinis.',
   drawerFlexibleAreasOnly:
-    "Montées et descentes autorisées n'importe où à l'intérieur d'une zone, durant les horaires d'ouverture annoncés.",
+    'Montées et descentes autorisées n\'importe où à l\'intérieur d\'une zone, durant les horaires d\'ouverture annoncés.',
   drawerHailAndRideSections:
     'La route est prédéfinie, mais sur certains tronçons il est possible de monter / descendre nimporte où en faisant un signal visuel au chauffeur.',
   journeyPatternsAddJourneyPatternIconButtonLabel: 'Add journey pattern',
@@ -245,11 +243,11 @@ export const messages: MessagesKey = {
   stepperJourneyPattern: 'Itinéraire',
   stepperServiceJourney: 'Course',
   stepperBooking: 'Réservation',
-  editorStopPoints: "Ajouter des points d'arrêts ou des zones pour le service",
+  editorStopPoints: 'Ajouter des points d\'arrêts ou des zones pour le service',
   editorStopPointFlexibleAreaOnly:
-    "Ajoutez une point d'arrêt ou une zone définissant le service",
+    'Ajoutez une point d\'arrêt ou une zone définissant le service',
   stopPointsInfo:
-    "Vous devez créer au moins deux points d'arrêt; un pour le début et l'autre pour la fin du service. Si vous créez un service à partir d'une zone, et que vous avez seulement une zone dans votre service, vous devez ajouter la même zone deux fois.",
+    'Vous devez créer au moins deux points d\'arrêt; un pour le début et l\'autre pour la fin du service. Si vous créez un service à partir d\'une zone, et que vous avez seulement une zone dans votre service, vous devez ajouter la même zone deux fois.',
   stopPointsInfoFixed:
     'You have to add at least two stop points; one for start and one for stop. Enter quay id from the National stop place registry.',
   deleteStopPointDialogTitle: 'Delete stop point',
@@ -280,9 +278,9 @@ export const messages: MessagesKey = {
   dayTypeEditorToDate: 'Au *',
   dayTypeEditorToDateValidation: 'Postérieur à la date de début',
   passingTimesEditorError: 'Vous devez avoir des horaires de passage valides.',
-  editorAddStopPoint: "Ajouter un point d'arrêt",
-  editorAddServiceJourneys: "Créer d'autres courses",
-  editorAddJourneyPatterns: "Créer d'autres itinéraires",
+  editorAddStopPoint: 'Ajouter un point d\'arrêt',
+  editorAddServiceJourneys: 'Créer d\'autres courses',
+  editorAddJourneyPatterns: 'Créer d\'autres itinéraires',
   editorEdit: 'Modifier',
   editorCreate: 'Créer un nouveau ',
   editorDetailedCreate: 'Créer une nouvelle {details}',
@@ -294,7 +292,7 @@ export const messages: MessagesKey = {
   generalNameLabel: 'Nom *',
   generalPrivateCodeLabel: 'Code privé',
   generalPrivateCodeLabelTooltip:
-    "Le code privé identifie l'itinéraire en interne pour lopérateur",
+    'Le code privé identifie l\'itinéraire en interne pour lopérateur',
   generalValidationName: 'Vous devez entrer un nom.',
   tableDeleteConfirmDialogCancelButtonText: 'Non',
   tableDeleteConfirmDialogConfirmButtonText: 'Oui',
@@ -315,7 +313,7 @@ export const messages: MessagesKey = {
   newJourneyPatternModalLabel: 'Nom',
   newJourneyPatternModalPlaceholder: 'Par exemple "Route locale"',
   editorLoadingLineText: 'Chargement la ligne',
-  editorLoadingNetworkAndStopsText: "Chargement des réseaux et points d'arrêts",
+  editorLoadingNetworkAndStopsText: 'Chargement des réseaux et points d\'arrêts',
   editorSaveButtonText: 'Enregistrer',
   editorSaveAndCreateLine: 'Enregistrer et créer la ligne',
   editorSaveLineLoadingText: 'Enregistrement de la ligne...',
@@ -331,11 +329,11 @@ export const messages: MessagesKey = {
   labelFrontText: 'Message girouette',
   labelFrontTextRequired: 'Message girouette *',
   labelBoarding: 'Montée/Descente',
-  labelQuayRef: "Identifiant de quai (du référentiel d'arrêts) *",
+  labelQuayRef: 'Identifiant de quai (du référentiel d\'arrêts) *',
   flexibleStopPlaceRefAndQuayRefBothValues:
-    "Choisissez un point d'arrêt ou un quai, pas les deux",
-  flexibleStopPlaceRefAndQuayRefNoValues: "Vous devez choisir un point d'arrêt",
-  flexibleStopPlaceNoValue: "Vous devez choisir un point d'arrêt",
+    'Choisissez un point d\'arrêt ou un quai, pas les deux',
+  flexibleStopPlaceRefAndQuayRefNoValues: 'Vous devez choisir un point d\'arrêt',
+  flexibleStopPlaceNoValue: 'Vous devez choisir un point d\'arrêt',
   frontTextNoValue: 'Vous devez entrer un message pour la girouette',
   frontTextAlighting: 'Le premier point doit être typé en Montée',
   frontTextBoarding: 'Le dernier point doit être typé en descente',
@@ -344,20 +342,20 @@ export const messages: MessagesKey = {
   no: 'Non',
   tableName: 'Nom',
   tableFrontText: 'Message girouette',
-  frontTextTooltip: "Le texte affiché à l'avant du véhicule",
+  frontTextTooltip: 'Le texte affiché à l\'avant du véhicule',
   tableBoarding: 'Montée',
   tableAlighting: 'Descente',
-  tableDefaultValue: "- Nouveau point d'arrêt -",
-  tableNoStopPoints: "Pas de points d'arrêts.",
-  tableDeleteTitle: "Supprimer un point d'arrêt",
+  tableDefaultValue: '- Nouveau point d\'arrêt -',
+  tableNoStopPoints: 'Pas de points d\'arrêts.',
+  tableDeleteTitle: 'Supprimer un point d\'arrêt',
   tableDeleteMessage: 'Etes-vous sur de vouloir supprimer ce point ?',
   serviceJourneyAvailability: 'Disponiblité',
   serviceJourneyPassingTimes: 'Heures de passage',
   serviceJourneyBusinessHours: 'Horaires de circulation',
   passingTimesInfo:
-    "Entrez les heures de passage pour les différents arrêts ou zones. Pour un service zonal, vous devez spécifier les heures de service, avec l'horaire de début sur le premier arrêt et lhoraire de fin sur le dernier.",
+    'Entrez les heures de passage pour les différents arrêts ou zones. Pour un service zonal, vous devez spécifier les heures de service, avec l\'horaire de début sur le premier arrêt et lhoraire de fin sur le dernier.',
   businessHoursInfo:
-    "Entrez les heures de circulation pour le point d'arrêt ou la zone. Pour un itinéraire zonal, vous devez spécifier les horaires avec un horaire de départ au premier arrêt de la zone, et un horaire d'arrivée au dernier arrêt",
+    'Entrez les heures de circulation pour le point d\'arrêt ou la zone. Pour un itinéraire zonal, vous devez spécifier les horaires avec un horaire de départ au premier arrêt de la zone, et un horaire d\'arrivée au dernier arrêt',
   passingTimesInfoFixed:
     'Entrez les heures de passage pour les différents arrêts',
   serviceJourneyBooking: 'Réservation',
@@ -367,10 +365,10 @@ export const messages: MessagesKey = {
   generalAvailability: 'Disponibilité',
   generalPrivateCode: 'Code privé',
   generalPrivateCodeTooltip:
-    "Le code privé est l'identifiant de parcours à usage interne pour l'opérateur",
+    'Le code privé est l\'identifiant de parcours à usage interne pour l\'opérateur',
   generalPublicCode: 'Code public',
   generalPublicCodeTooltip:
-    "Le code public est l'identifiant de parcours à destination des voyageurs",
+    'Le code public est l\'identifiant de parcours à destination des voyageurs',
   generalOperator: 'Opérateur',
   journeyPatternDeleteDialogTitle: 'Supprimer un itinéraire',
   journeyPatternDeleteDialogMessage:
@@ -390,22 +388,22 @@ export const messages: MessagesKey = {
   transportModeEmpty: 'Vous devez sélectionner un mode de transport.',
   transportSubModeEmpty: 'Vous devez sélectionner un sous-mode de transport.',
   flexibleLineTypeEmpty: 'Vous devez sélectionner un type.',
-  homePage: "Page d'accueil",
+  homePage: 'Page d\'accueil',
   networkAuthorityMissing: 'Le réseau est manquant',
   networkAuthorityMissingDetails:
-    "Il n'y a aucune autorité créée pour ce producteur de données. Contactez l'administrateur de l'application pour obtenir de l'aide.",
+    'Il n\'y a aucune autorité créée pour ce producteur de données. Contactez l\'administrateur de l\'application pour obtenir de l\'aide.',
   networksAuthorityTableHeaderLabel: 'Autorité',
   editorAuthorityLabelText: 'Autorité *',
   editorCreateNetworkHeaderText: 'Créer un réseau',
-  editorCreateNetworkSuccessMessageHeader: 'Réseau créé/modifié',
+  editorCreateNetworkSuccessMessageHeader: 'Réseau',
   editorCreateNetworkErrorMessageHeader:
-    "Problème lors de l'enregistrement du réseau",
+    'Problème lors de l\'enregistrement du réseau',
   editorDeleteNetworkSuccessMessageHeader: 'Réseau supprimé avec succès',
   editorDeleteNetworkErrorMessageHeader:
     'Problème lors de la suppression du réseau',
   editorNetworkDescription:
     'Au moins un réseau est nécessaire. Les réseaux peuvent être utilisés pour grouper les lignes.',
-  editorValidationAuthority: "L'autorité est obligaroire",
+  editorValidationAuthority: 'L\'autorité est obligaroire',
   editorValidationName: 'Le nom est obligatoire',
   editorDeleteNetworkConfirmDialogCancelText: 'Non',
   editorDeleteNetworkConfirmDialogConfirmText: 'Oui',
@@ -426,11 +424,11 @@ export const messages: MessagesKey = {
   networksNoNetworksFoundText: 'Aucun réseau trouvé',
   networksPrivateCodeTableHeaderLabel: 'Code privé',
   stopPlacesCreateStopPlaceLinkIconLabelText: 'Créer',
-  stopPlaceText: "zone d'arrêt",
+  stopPlaceText: 'zone d\'arrêt',
   stopPlace: 'Zone / Arrêt *',
   editorDescription:
     'Créez une zone en entrant une liste de coordonnées au format GeoJSON ou en cliquant sur la carte.',
-  editorCreateHeader: "Créer une zone d'arrêt",
+  editorCreateHeader: 'Créer une zone d\'arrêt',
   delete: 'Supprimer',
   editorDeleteStopPlaceDialogCancelButtonText: 'Non',
   editorDeleteStopPlaceDialogConfirmButtonText: 'Oui',
@@ -439,10 +437,10 @@ export const messages: MessagesKey = {
   editorDeleteStopPlaceDialogTitle: 'Supprimer cette zone',
   editorDeletingOverlayLoaderText: 'Suppression de la zone...',
   editorDescriptionFormLabelText: 'Description',
-  editorEditHeader: "Modifier une zone ou point d'arrêt",
+  editorEditHeader: 'Modifier une zone ou point d\'arrêt',
   errorCoordinates: 'Les coordonnées sont dans un format invalide',
   editorLoadingDependenciesText: 'Chargement des dépendances',
-  editorLoadingStopPlaceText: "Chargement du point d'arrêt",
+  editorLoadingStopPlaceText: 'Chargement du point d\'arrêt',
   editorNameFormLabelText: 'Nom *',
   editorPrivateCodeFormLabelText: 'Code privé',
   editorCoordinatesFormLabelText: 'Coordonnées en GeoJson [Long, Lat]',
@@ -452,8 +450,8 @@ export const messages: MessagesKey = {
   validateFormErrorFlexibleAreaNotEnoughPolygons:
     'Vous devez ajouter un ou des points sur la carte',
   validateFormErrorNameEmpty: 'Vous devez entrer un nom',
-  stopPlacesHeader: "Zones d'arrêt",
-  stopPlacesLoadingStopPlacesText: "Chargement des points d'arrêts...",
+  stopPlacesHeader: 'Zones d\'arrêt',
+  stopPlacesLoadingStopPlacesText: 'Chargement des points d\'arrêts...',
   stopPlacesNameTableHeaderLabelText: 'Nom',
   stopPlacesNoStopPlacesFoundText: 'Aucune zone trouvée.',
   stopPlacesNumberOfPointsTableHeaderLabelText: 'Nombre de points',
@@ -461,20 +459,20 @@ export const messages: MessagesKey = {
   passingTimesPassingTime: 'Horaire de passage *',
   passingTimesDayOffset: 'Décalage de jours',
   passingTimesDayOffsetTooltip:
-    "Spécifiez un décalage de jour si l'horaire indiqué est un jour ou plus d'un jour après le départ de la course",
+    'Spécifiez un décalage de jour si l\'horaire indiqué est un jour ou plus d\'un jour après le départ de la course',
   errorAllPassingTimesMustBeFilled:
     'Tous les horaires de passage doivent être précisés',
   errorDepartureAfterArrival:
-    "L'heure de départ ne peut pas être avant l'heure d'arrivée",
+    'L\'heure de départ ne peut pas être avant l\'heure d\'arrivée',
   errorDepartureAfterEarliest:
-    "L'heure de départ ne peut pas pas être avant la première heure de départ",
+    'L\'heure de départ ne peut pas pas être avant la première heure de départ',
   errorArrivalBeforeLatest:
-    "L'heure d'arrivée ne peut pas pas être avant la dernière heure d'arrivée",
+    'L\'heure d\'arrivée ne peut pas pas être avant la dernière heure d\'arrivée',
   errorLaterThanPrevious:
-    "Tous les horaires doivent être après celui du point d'arrêt le précédent.",
+    'Tous les horaires doivent être après celui du point d\'arrêt le précédent.',
   errorLastArrivalMustBeSet:
-    "L{horaire d'arrivée doit être précisé pour le dernier point d'arrêt.",
-  errorStopPoints: "Vous devez créer au moins deux points d'arrêts",
+    'L\'horaire d\'arrivée doit être précisé pour le dernier point d\'arrêt.',
+  errorStopPoints: 'Vous devez créer au moins deux points d\'arrêts',
   errorARowIsMissingData:
     'Les horaires ne sont pas remplis dans au moins une des lignes',
   weekdaysMonday: 'Lundi',
@@ -544,15 +542,15 @@ export const messages: MessagesKey = {
   copyServiceJourneyDialogCancelButtonText: 'Abandonner',
   copyServiceJourneyDialogSaveButtonText: 'Create copies',
   copyServiceJourneyDialogValidationUntilTimeBeforeInitialTimeError:
-    "Last possible departure time can't be before initial departure time",
+    'Last possible departure time can\'t be before initial departure time',
   copyServiceJourneyDialogMultipleSwitchLabel: 'Create multiple copies',
   copyServiceJourneyDialogIntervalLabel: 'Choose an interval',
   flexibleAreasOnly: 'TAD Zonal',
   public: 'Tout le monde',
   authorisedPublic: 'Personnes autorisées',
-  staff: "Personnel d'exploitation",
+  staff: 'Personnel d\'exploitation',
   timeOfTravelOnly: 'Au moment du déplacement',
   dayOfTravelOnly: 'Le jour du déplacement',
-  untilPreviousDay: "Jusqu'au jour précédent",
-  advanceAndDayOfTravel: 'Jusquau jour du voyage',
+  untilPreviousDay: 'Jusqu\'au jour précédent',
+  advanceAndDayOfTravel: 'Jusquau jour du voyage'
 };

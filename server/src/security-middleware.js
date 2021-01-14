@@ -47,7 +47,7 @@ const withSecurity = (app) => {
           inQuote('self'),
           openIDConnectUrl,
           'ws:',
-          'https://sentry.io',
+          'https://sentry.okina.fr',
         ],
         styleSrc: [inQuote('self'), inQuote('unsafe-inline')],
         imgSrc: ['*', 'data:'],
