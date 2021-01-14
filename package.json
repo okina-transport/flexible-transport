@@ -1,6 +1,6 @@
 {
   "name": "enki",
-  "version": "1.0.1-SNAPSHOT",
+  "version": "1.0.1",
   "author": "Entur",
   "private": true,
   "scripts": {
