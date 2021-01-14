@@ -34,12 +34,12 @@ export const messages: MessagesKey = {
   flexibleLinesSaveLineSuccessButton: 'Ok',
   flexibleStopPlacesDeleteStopPlaceErrorHeader: 'Supprimer cette zone',
   flexibleStopPlacesDeleteStopPlaceErrorMessage:
-    'An error occurred while deleting stop place: {details}',
+    'Une erreur est survenue lors de la suppression de la zone : {details}',
   flexibleStopPlacesDeleteStopPlaceSuccessHeader: "Suppression d'une zone",
   flexibleStopPlacesDeleteStopPlaceSuccessMessage: 'La zone a été supprimée',
-  flexibleStopPlacesLoadStopPlaceErrorHeader: 'Load stop place',
+  flexibleStopPlacesLoadStopPlaceErrorHeader: "Chargement d'une zone",
   flexibleStopPlacesLoadStopPlaceErrorMessage:
-    'An error occurred while loading stop place: {details}',
+    'Une erreur est survenue lors du chargement de la zone : {details}',
   flexibleStopPlacesLoadStopPlacesErrorHeader: "Chargement des points d'arrêts",
   flexibleStopPlacesLoadStopPlacesErrorMessage:
     "Une erreur est survenue en chargeant les points d'arrêts : {details}",
@@ -60,9 +60,9 @@ export const messages: MessagesKey = {
   navBarStopPlacesMenuItemLabel: "Zones d'arrêt ",
   userMenuLogoutLinkText: 'Déconnecter',
   userMenuMenuItemTextEnglish: 'English',
-  userMenuMenuItemTextLanguage: 'Language',
-  userMenuMenuItemTextNorwegian: 'Norsk',
-  languagePickerAriaLabel: 'Choose language',
+  userMenuMenuItemTextLanguage: 'Langue',
+  userMenuMenuItemTextNorwegian: 'Norvégien',
+  languagePickerAriaLabel: 'Choisissez la langue',
   navBarDataProvider: 'Organisation',
   redirectTitle: 'Modifications non sauvegardées !',
   redirectMessage:
@@ -121,21 +121,22 @@ export const messages: MessagesKey = {
   viewerNameLabel: 'Nom',
   viewerStatusLabel: 'Statut',
   viewerToDateLabel: 'Date de fin',
-  uttuErrorCONSTRAINT_VIOLATION: 'Ikke unikt navn',
+  uttuErrorCONSTRAINT_VIOLATION: 'Le nom doit être unique',
   uttuErrorCONSTRAINT_VIOLATION_SERVICE_JOURNEY_UNIQUE_NAME:
-    'Service journey must have a unique name',
+    'Le parcours doit avoir un nom unique',
   uttuErrorCONSTRAINT_VIOLATION_LINE_UNIQUE_NAME:
-    'Flexible line must have a unique name',
+    'La ligne TAD doit avoir un nom unique',
   uttuErrorCONSTRAINT_VIOLATION_JOURNEY_PATTERN_UNIQUE_NAME:
-    'The journey pattern must have a unique name',
+    "L'itinéraire doit avoir un nom unique",
   uttuErrorENTITY_IS_REFERENCED:
-    'Entity cannot be deleted because {noOfLines, number} other {noOfLines, plural, one {entity has a reference} other {entities have references}} to it.',
+    'L{objet ne put pas être effacé car {noOfLines, number} autres {noOfLines, plural, one {entity ont une référence} autre {entities a une référence}} vers lui.',
   uttuErrorFROM_DATE_AFTER_TO_DATE:
     'La date de début ne peut être ultérieure à la date de fin',
   uttuErrorMINIMUM_POINTS_IN_SEQUENCE:
-    'Journey pattern must have minimum 2 sequential stop points.',
-  uttuErrorMISSING_OPERATOR: 'Service journey or line must have an operator',
-  uttuErrorORGANISATION_NOT_VALID_OPERATOR: 'Invalid operator',
+    'Un itinéraire doit avoir une séquence minimum de deux points.',
+  uttuErrorMISSING_OPERATOR:
+    'un parcours ou une ligne doivent avoir un opérateur de transport associé',
+  uttuErrorORGANISATION_NOT_VALID_OPERATOR: 'Opérateur de transport invalide',
   uttuErrorNO_VALID_LINES_IN_DATA_SPACE:
     'Aucune ligne valide trouvée à exporter',
   uttuErrorUNKNOWN: 'Erreur inconnue',
@@ -153,7 +154,7 @@ export const messages: MessagesKey = {
   bookingInfoText: 'Informations concernant la réservation de la course.',
   bookingLabel:
     "Pour faciliter les réservations, nous recommandons de renseigner le téléphone, URL, et notice d'information.",
-  bookingAccessAuthorisedPublic: 'Personnel autorisé',
+  bookingAccessAuthorisedPublic: 'Public autorisé',
   bookingAccessPublic: 'Public',
   bookingAccessStaff: 'Equipe',
   bookingAccessSelectionTitle: 'Accès à la réservation',
@@ -543,11 +544,11 @@ export const messages: MessagesKey = {
   copyServiceJourneyDialogMultipleSwitchLabel: 'Create multiple copies',
   copyServiceJourneyDialogIntervalLabel: 'Choose an interval',
   flexibleAreasOnly: 'TAD Zonal',
-  public: 'Tout public',
-  authorisedPublic: 'Public autorisé',
-  staff: 'Salariés',
-  timeOfTravelOnly: 'Heure du déplacement',
-  dayOfTravelOnly: 'Jour du déplacement',
-  untilPreviousDay: 'La veille du déplacement',
-  advanceAndDayOfTravel: 'Avant-veille ou antérieur',
+  public: 'Tout le monde',
+  authorisedPublic: 'Personnes autorisées',
+  staff: "Personnel d'exploitation",
+  timeOfTravelOnly: 'Au moment du déplacement',
+  dayOfTravelOnly: 'Le jour du déplacement',
+  untilPreviousDay: "Jusqu'au jour précédent",
+  advanceAndDayOfTravel: 'Jusquau jour du voyage',
 };
