@@ -1,40 +1,37 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { selectIntl } from 'i18n';
+import { AppIntlState, selectIntl } from 'i18n';
 import './styles.scss';
 import BookingArrangement from 'model/BookingArrangement';
 import { addOrRemove } from 'helpers/arrays';
 import {
   BOOKING_ACCESS,
+  BOOKING_LIMIT_TYPE,
   BOOKING_METHOD,
   bookingMethodMessages,
   paymentTimeMessages,
   PURCHASE_MOMENT,
   PURCHASE_WHEN,
-  BOOKING_LIMIT_TYPE,
 } from 'model/enums';
-import { LeadParagraph, Label } from '@entur/typography';
+import { Label, LeadParagraph } from '@entur/typography';
 import {
-  RadioGroup,
-  Radio,
+  Fieldset,
   InputGroup,
+  Radio,
+  RadioGroup,
   TextArea,
   TextField,
-  Fieldset,
 } from '@entur/form';
 import Contact from 'model/Contact';
 import { Dropdown } from '@entur/dropdown';
 import { FilterChip } from '@entur/chip';
 import {
-  getEnumInit,
   getEnumInitWithi18n,
-  mapEnumToItems,
   mapEnumToItemsWithi18nLabel,
 } from 'helpers/dropdown';
 import DurationPicker from 'components/DurationPicker';
 import { TimeUnitPickerPosition } from 'components/TimeUnitPicker';
 import { GlobalState } from 'reducers';
-import { AppIntlState } from 'i18n';
 import { BookingInfoAttachment, bookingInfoAttachmentLabel } from './constants';
 
 type Props = {
@@ -216,9 +213,9 @@ export default (props: Props) => {
       <section className="booking-time-info">
         <Dropdown
           label={formatMessage('bookingTimeSelectionTitle')}
-          initialSelectedItem={getEnumInit(bookWhen)}
+          initialSelectedItem={getEnumInitWithi18n(bookWhen, formatMessage)}
           placeholder={formatMessage('defaultOption')}
-          items={mapEnumToItems(PURCHASE_WHEN)}
+          items={mapEnumToItemsWithi18nLabel(PURCHASE_WHEN, formatMessage)}
           clearable
           onChange={(e) =>
             onChange({

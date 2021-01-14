@@ -546,4 +546,8 @@ export const messages: MessagesKey = {
   public: 'Tout public',
   authorisedPublic: 'Public autorisé',
   staff: 'Salariés',
+  timeOfTravelOnly: 'Heure du déplacement',
+  dayOfTravelOnly: 'Jour du déplacement',
+  untilPreviousDay: 'La veille du déplacement',
+  advanceAndDayOfTravel: 'Avant-veille ou antérieur',
 };
