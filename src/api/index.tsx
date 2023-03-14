@@ -14,8 +14,7 @@ import { Variables } from 'graphql-request/dist/src/types';
 import { useSelector } from 'react-redux';
 import { ReactElement } from 'react';
 import { GlobalState } from 'reducers';
-import { useAuth } from '@entur/auth-provider';
-import { AuthState } from 'reducers/auth';
+import { Auth, useAuth } from 'config/AuthContext';
 import { useConfig } from 'config/ConfigContext';
 
 export const staticHeaders = { 'ET-Client-Name': 'Entur - Flex editor' };
@@ -65,7 +64,7 @@ const cleanTypeName = new ApolloLink((operation, forward) => {
   });
 });
 
-const apolloClient = (apiBase: string, provider: string, auth: AuthState) => {
+const apolloClient = (apiBase: string, provider: string, auth: Auth) => {
   const httpLink = createHttpLink({
     uri: apiBase + '/' + provider + '/graphql',
   });

@@ -22,7 +22,7 @@ import { GlobalState } from 'reducers';
 import { ExportsState } from 'reducers/exports';
 import { download } from 'model/Export';
 import './styles.scss';
-import { useAuth } from '@entur/auth-provider';
+import { useAuth } from 'config/AuthContext';
 import { useConfig } from 'config/ConfigContext';
 
 const Exports = ({ history }: RouteComponentProps) => {

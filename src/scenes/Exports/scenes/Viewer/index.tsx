@@ -22,7 +22,7 @@ import { download, Export } from 'model/Export';
 import Page from 'components/Page';
 import uttuMessages, { isOfUttuMessage } from 'helpers/uttu.messages';
 import './styles.scss';
-import { useAuth } from '@entur/auth-provider';
+import { useAuth } from 'config/AuthContext';
 import { useConfig } from 'config/ConfigContext';
 
 const ExportItem = ({

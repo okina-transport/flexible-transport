@@ -17,7 +17,7 @@ import NavigateConfirmBox from 'components/ConfirmNavigationDialog';
 import LanguagePicker from './LanguagePicker';
 import LogoutChip from './LogoutChip';
 import { ClosedLockIcon } from '@entur/icons';
-import { useAuth } from '@entur/auth-provider';
+import { useAuth } from 'config/AuthContext';
 import { useConfig } from 'config/ConfigContext';
 import { ProvidersState } from 'reducers/providers';
 
