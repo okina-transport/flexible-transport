@@ -32,3 +32,9 @@ Uses [Jest](https://facebook.github.io/jest) for unit and reducer testing.
 ```
 npm test
 ```
+
+Build and run manually the docker
+```
+docker build . -f Dockerfile -t mobiiti/flexible-transport:0.0.2
+docker run -it --rm -p3001:3001 -e REACT_APP_UTTU_API_URL=http://0.0.0.0:11701/services/flexible-lines mobiiti/flexible-transport:0.0.2
+```

@@ -8,8 +8,13 @@ import { ConfigContext } from 'config/ConfigContext';
 import { AuthContext } from 'config/AuthContext';
 import Main from './Main';
 
+const node = document.getElementById('root');
+const props = node.dataset.react
+  ? JSON.parse(node.dataset.react)
+  : { mode: 'dev' };
+
 const renderIndex = async (kc) => {
-  const config = await fetchConfig();
+  const config = await fetchConfig(props);
 
   render(
     <AuthContext.Provider value={kc}>
@@ -17,7 +22,7 @@ const renderIndex = async (kc) => {
         <Main keycloak={kc} />
       </ConfigContext.Provider>
     </AuthContext.Provider>,
-    document.getElementById('root')
+    node
   );
 };
 
