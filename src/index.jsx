@@ -29,9 +29,11 @@ const config = require('./config/keycloak.json');
 
 let kc = new Keycloak(config);
 kc.init({ onLoad: 'login-required', checkLoginIframe: false }).then(
-  (authenticated) => {
+  async (authenticated) => {
     if (authenticated) {
       const roles = kc.tokenParsed.roles.map((r) => JSON.parse(r).r);
+      const userInfo = await kc.loadUserInfo();
+      //console.log(userInfo);
       console.log(roles); // ['adminEditRouteData', 'editStops', 'deleteStops']
       kc = {
         ...kc,
@@ -41,6 +43,7 @@ kc.init({ onLoad: 'login-required', checkLoginIframe: false }).then(
         isAuthenticated: authenticated,
         isLoading: false,
         roleAssignments: roles,
+        user: { name: userInfo.preferred_username },
       };
       renderIndex(kc);
     }
