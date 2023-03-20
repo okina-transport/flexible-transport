@@ -17,7 +17,7 @@ import { GlobalState } from 'reducers';
 import { Auth, useAuth } from 'config/AuthContext';
 import { useConfig } from 'config/ConfigContext';
 
-export const staticHeaders = { 'ET-Client-Name': 'Entur - Flex editor' };
+export const staticHeaders = { 'ET-Client-Name': 'Enki' };
 
 export type SearchForQuayResponse = {
   stopPlace: null | StopPlace[];

@@ -11,7 +11,7 @@ import {
   SideNavigationGroup,
 } from '@entur/menu';
 import { GlobalState } from 'reducers';
-import logo from 'static/img/logo.png';
+import logo from 'static/img/lumidata-logo.png';
 import './styles.scss';
 import NavigateConfirmBox from 'components/ConfirmNavigationDialog';
 import LanguagePicker from './LanguagePicker';

@@ -66,7 +66,7 @@ export const messages: MessagesKey = {
     'You have unsaved changes which will be lost if you navigate away. Do you want to proceed?',
   redirectYes: 'Yes, leave this page',
   redirectNo: 'No, stay on this page',
-  appTitle: 'Nplan',
+  appTitle: 'FlexibleLines',
   exportsCreateExportButtonLabel: 'Create export',
   exportCreatorDryRunFormLabel: 'Dry run',
   exportCreatorDryRunFormLabelTooltip:
