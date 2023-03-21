@@ -22,6 +22,10 @@ function loadApp(req, res, props) {
 
 app.use(express.static(path.join(__dirname, 'build')));
 
+app.get('_health', function(req, res) {
+  res.sendStatus(200);
+});
+
 app.all('*', function (req, res) {
     const props = {
       apiUrl: REACT_APP_UTTU_API_URL,
