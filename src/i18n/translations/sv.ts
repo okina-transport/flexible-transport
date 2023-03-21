@@ -56,6 +56,7 @@ export const messages = {
   navBarStopPlacesMenuItemLabel: 'Flexibla hållplatser',
   userMenuLogoutLinkText: 'Logga ut',
   userMenuMenuItemTextEnglish: 'English',
+  userMenuMenuItemTextFrench: 'Français',
   userMenuMenuItemTextLanguage: 'Språk',
   userMenuMenuItemTextNorwegian: 'Norsk',
   userMenuMenuItemTextSwedish: 'Svenska',
@@ -484,7 +485,7 @@ export const messages = {
   passingTimeTypeDrawerEarliestDepartureText: `
     Resor kan inte starta från den här hållplatsen eller området före den angivna tidspunkten.
   `,
-  passingTimeTypeDrawerLatestARrivalText: `
+  passingTimeTypeDrawerLatestArrivalText: `
     Resor kan inte avslutas på den här hållplatsen eller området före den angivna tidspunkten.
   `,
   passingTimesTypeFixed: 'Fasta',
@@ -620,4 +621,8 @@ export const messages = {
   saveProviderErrorFallback: 'Okänt fel vid sparning av dataleverantör',
   noProvidersDescriptionText:
     'Din Nplan-installation behöver minst en dataleverantör',
+  loading: 'Laddar dataleverantörer och organisationer...',
+  availableNext120Days: 'Tillgänglig kommande 120 dagar',
+  becomesUnavailableLess120Days: 'Blir otillgänglig på mindre än 120 dagar',
+  noLongerAvailable: 'Inte längre tillgänglig'
 };

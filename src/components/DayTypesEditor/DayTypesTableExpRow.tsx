@@ -7,6 +7,8 @@ import {
 } from '@entur/table';
 import DayType from 'model/DayType';
 import React, { useState } from 'react';
+import {useSelector} from "react-redux";
+import {selectIntl} from "../../i18n";
 
 export const DayTypesTableExpRow = ({
   dayType,
@@ -24,6 +26,7 @@ export const DayTypesTableExpRow = ({
   openInitial?: boolean;
 }) => {
   const [open, setopen] = useState(openInitial);
+  const { formatMessage } = useSelector(selectIntl);
 
   return (
     <>
@@ -41,7 +44,7 @@ export const DayTypesTableExpRow = ({
           <ExpandRowButton onClick={() => setopen(!open)} open={open} />
         </DataCell>
         <DataCell>{dayType.id}</DataCell>
-        <DataCell>{dayType.name || 'No name'}</DataCell>
+        <DataCell>{dayType.name || formatMessage('dayTypeNoName')}</DataCell>
         <DataCell>{numberOfServiceJourneys}</DataCell>
       </TableRow>
       <ExpandableRow colSpan={3} open={open}>
