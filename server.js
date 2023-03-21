@@ -5,6 +5,7 @@ const cors = require('cors')
 require('dotenv').config();
 
 const REACT_APP_UTTU_API_URL = process.env.REACT_APP_UTTU_API_URL
+const AUTH_SERVER_URL = process.env.AUTH_SERVER_URL
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -13,6 +14,7 @@ const corsOptions = {
   //credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 }
+
 
 function loadApp(req, res, props) {
   const data = fs.readFileSync(path.resolve("./build/index.html"), "utf8");
@@ -29,6 +31,7 @@ app.get('_health', function(req, res) {
 app.all('*', function (req, res) {
     const props = {
       apiUrl: REACT_APP_UTTU_API_URL,
+      authServerUrl: AUTH_SERVER_URL,
       mode: "prod"
     }
     return loadApp(req, res, props);

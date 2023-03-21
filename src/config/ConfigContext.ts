@@ -2,6 +2,7 @@ import { createContext, useContext } from 'react';
 
 export interface Config {
   uttuApiUrl?: string;
+  authServerUrl?: string;
   enableLegacyOrganisationsFilter?: boolean;
   adminRole?: string;
   xmlnsUrlPrefix?: string;

@@ -13,9 +13,7 @@ const props = node.dataset.react
   ? JSON.parse(node.dataset.react)
   : { mode: 'dev' };
 
-const renderIndex = async (kc) => {
-  const config = await fetchConfig(props);
-
+const renderIndex = async (kc, config) => {
   render(
     <AuthContext.Provider value={kc}>
       <ConfigContext.Provider value={config}>
@@ -26,31 +24,37 @@ const renderIndex = async (kc) => {
   );
 };
 
-const config = require('./config/keycloak.json');
+async function init(props) {
+  const config = await fetchConfig(props);
 
-//if (process.env.REACT_APP_UTTU_API_URL) {
-//  config.uttuApiUrl = process.env.REACT_APP_UTTU_API_URL;
-//}
+  const keycloakConfig = {
+    realm: 'Mobi-iti',
+    url: config.authServerUrl,
+    clientId: 'neti-frontend',
+  };
 
-let kc = new Keycloak(config);
-kc.init({ onLoad: 'login-required', checkLoginIframe: false }).then(
-  async (authenticated) => {
-    if (authenticated) {
-      const roles = kc.tokenParsed.roles.map((r) => JSON.parse(r).r);
-      const userInfo = await kc.loadUserInfo();
-      //console.log(userInfo);
-      console.log(roles); // ['adminEditRouteData', 'editStops', 'deleteStops']
-      kc = {
-        ...kc,
-        getAccessToken: function () {
-          return kc.token;
-        },
-        isAuthenticated: authenticated,
-        isLoading: false,
-        roleAssignments: roles,
-        user: { name: userInfo.preferred_username },
-      };
-      renderIndex(kc);
+  let kc = new Keycloak(keycloakConfig);
+  kc.init({ onLoad: 'login-required', checkLoginIframe: false }).then(
+    async (authenticated) => {
+      if (authenticated) {
+        const roles = kc.tokenParsed.roles.map((r) => JSON.parse(r).r);
+        const userInfo = await kc.loadUserInfo();
+        //console.log(userInfo);
+        console.log(roles); // ['adminEditRouteData', 'editStops', 'deleteStops']
+        kc = {
+          ...kc,
+          getAccessToken: function () {
+            return kc.token;
+          },
+          isAuthenticated: authenticated,
+          isLoading: false,
+          roleAssignments: roles,
+          user: { name: userInfo.preferred_username },
+        };
+        renderIndex(kc, config);
+      }
     }
-  }
-);
+  );
+}
+
+init(props);

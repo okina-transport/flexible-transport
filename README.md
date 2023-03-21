@@ -34,7 +34,11 @@ npm test
 ```
 
 Build and run manually the docker
+`docker build . -f Dockerfile -t mobiiti/flexible-transport:0.0.2`
+
 ```
-docker build . -f Dockerfile -t mobiiti/flexible-transport:0.0.2
-docker run -it --rm -p3001:3001 -e REACT_APP_UTTU_API_URL=http://0.0.0.0:11701/services/flexible-lines mobiiti/flexible-transport:0.0.2
+docker run -it --rm -p3001:3001 \
+-e REACT_APP_UTTU_API_URL=http://0.0.0.0:11701/services/flexible-lines \
+-e AUTH_SERVER_URL=https://mobi-iti-ara.dev.okina.fr/auth \
+mobiiti/flexible-transport:0.0.2
 ```
