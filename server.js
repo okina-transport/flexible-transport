@@ -18,11 +18,14 @@ const corsOptions = {
 
 function loadApp(req, res, props) {
   const data = fs.readFileSync(path.resolve("./build/index.html"), "utf8");
-  const result = data.replace('<div id="root"','<div id="root" data-react='+JSON.stringify(props));
+  const result = data.replace('<div id="root"','<div id="root" data-react='+ JSON.stringify(props));
   return res.send(result);
 }
 
-app.use(express.static(path.join(__dirname, 'build')));
+//app.use(express.static(path.join(__dirname, 'build')));
+app.use('/flexible-transport/static/',
+  express.static(path.join(__dirname, 'build', 'static'))
+);
 
 app.get('_health', function(req, res) {
   res.sendStatus(200);
