@@ -45,7 +45,7 @@ const App = () => {
 
   const { adminRole } = useConfig();
 
-  const basename = '';
+  const basename = '/flexible-transport';
 
   return (
     <div className="app">

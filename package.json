@@ -7,7 +7,7 @@
     "test": "react-scripts test --env=jsdom --modulePaths=src",
     "start": "react-scripts start",
     "start-devenv": "cross-env npm run start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=/flexible-transport react-scripts build",
     "prod": "node server.js",
     "snyk-protect": "snyk protect",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
