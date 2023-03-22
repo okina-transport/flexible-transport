@@ -64,7 +64,7 @@ const App = () => {
                   )}
                 <Loading
                   className="app-loader"
-                  text="Laster inn dataleverandører og organisasjoner..."
+                  text={formatMessage('loading')}
                   isLoading={
                     !providers.providers ||
                     auth.isLoading ||

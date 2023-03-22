@@ -97,7 +97,7 @@ const ServiceJourneyEditor = (props: Props) => {
     <div className="service-journey-editor">
       <PassingTimeTypeDrawer
         open={openPassingTimeTypeDrawer}
-        title="Passing times"
+        title={formatMessage('serviceJourneyPassingTimes')}
         onDismiss={() => {
           setOpenPassingTimeTypeDrawer(false);
         }}

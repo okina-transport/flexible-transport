@@ -56,6 +56,7 @@ export const messages: MessagesKey = {
   navBarStopPlacesMenuItemLabel: 'Flexible stop places',
   userMenuLogoutLinkText: 'Log out',
   userMenuMenuItemTextEnglish: 'English',
+  userMenuMenuItemTextFrench: 'Français',
   userMenuMenuItemTextLanguage: 'Language',
   userMenuMenuItemTextNorwegian: 'Norsk',
   userMenuMenuItemTextSwedish: 'Svenska',
@@ -490,7 +491,7 @@ export const messages: MessagesKey = {
   passingTimeTypeDrawerEarliestDepartureText: `
     Journeys cannot begin from this stop or area before the given time.
   `,
-  passingTimeTypeDrawerLatestARrivalText: `
+  passingTimeTypeDrawerLatestArrivalText: `
     Journeys cannot end at this stop or area after the given time.
   `,
   passingTimesTypeFixed: 'Fixed',
@@ -626,4 +627,8 @@ export const messages: MessagesKey = {
   saveProviderErrorFallback: 'Unknown error saving provider',
   noProvidersDescriptionText:
     'Your Nplan installation needs at least one provider',
+  loading: 'Loading data providers and organizations...',
+  availableNext120Days: 'Available next 120 days',
+  becomesUnavailableLess120Days: 'Becomes unavailable in less than 120 days',
+  noLongerAvailable: 'No longer available'
 };

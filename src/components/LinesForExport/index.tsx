@@ -22,6 +22,7 @@ import useRefetchOnLocationChange from 'hooks/useRefetchOnLocationChange';
 import { ExportLineAssociation } from 'model/Export';
 import { useSelector } from 'react-redux';
 import { selectIntl } from 'i18n';
+import {MessagesKey} from "../../i18n/translations/translationKeys";
 
 type Props = {
   onChange: (lines: ExportLineAssociation[]) => void;
@@ -100,13 +101,13 @@ const mapLine = ({ id, name, journeyPatterns }: Line): ExportableLine => {
   };
 };
 
-const mapStatusToText = (status: string): string => {
+const mapStatusToText = (status: string): keyof MessagesKey => {
   if (status === 'positive') {
-    return 'Available next 120 days';
+    return 'availableNext120Days';
   } else if (status === 'neutral') {
-    return 'Becomes unavailable in less than 120 days';
+    return 'becomesUnavailableLess120Days';
   } else {
-    return 'No longer available';
+    return 'noLongerAvailable';
   }
 };
 
@@ -229,7 +230,7 @@ export default ({ onChange }: Props) => {
                 <SmallText>{line.id}</SmallText>
               </DataCell>
               <DataCell status={line.status}>
-                {mapStatusToText(line.status)}
+                {formatMessage(mapStatusToText(line.status))}
               </DataCell>
               <DataCell>{`${line.from.toLocaleDateString()} - ${line.to.toLocaleDateString()}`}</DataCell>
             </TableRow>

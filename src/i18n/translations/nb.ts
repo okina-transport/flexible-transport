@@ -56,6 +56,7 @@ export const messages = {
   navBarStopPlacesMenuItemLabel: 'Fleksible stoppesteder',
   userMenuLogoutLinkText: 'Logg ut',
   userMenuMenuItemTextEnglish: 'English',
+  userMenuMenuItemTextFrench: 'Français',
   userMenuMenuItemTextLanguage: 'Språk',
   userMenuMenuItemTextNorwegian: 'Norsk',
   userMenuMenuItemTextSwedish: 'Svenska',
@@ -486,7 +487,7 @@ export const messages = {
   passingTimeTypeDrawerEarliestDepartureText: `
     Reiser kan ikke starte fra dette stoppet eller området før det gitte tidspunktet.
   `,
-  passingTimeTypeDrawerLatestARrivalText: `
+  passingTimeTypeDrawerLatestArrivalText: `
     Reiser kan ikke avsluttes på dette stoppet eller området før det gitte tidspunktet.
   `,
   passingTimesTypeFixed: 'Faste',
@@ -622,4 +623,8 @@ export const messages = {
   saveProviderErrorFallback: 'Ukjent feil ved lagring av dataleverandør',
   noProvidersDescriptionText:
     'Din Nplan-installasjon trenger minst en dataleverandør',
+  loading: 'Laster inn dataleverandører og organisasjoner...',
+  availableNext120Days: 'Tilgjengelig de neste 120 dagene',
+  becomesUnavailableLess120Days: 'Blir utilgjengelig på mindre enn 120 dager',
+  noLongerAvailable: 'Ikke lenger tilgjengelig'
 };

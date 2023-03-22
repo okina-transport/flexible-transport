@@ -41,7 +41,7 @@ export const PassingTimeTypeDrawer = ({ open, onDismiss, title }: Props) => {
           {formatMessage('passingTimeTypeDrawerEarliestDepartureText')}
         </ListItem>
         <ListItem title={formatMessage('passingTimesLatestArrivalTime')}>
-          {formatMessage('passingTimeTypeDrawerLatestARrivalText')}
+          {formatMessage('passingTimeTypeDrawerLatestArrivalText')}
         </ListItem>
       </UnorderedList>
     </Drawer>

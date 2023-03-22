@@ -6,8 +6,8 @@ import { MessagesKey } from 'i18n/translations/translationKeys';
 import { IntlState } from 'react-intl-redux';
 import { GlobalState } from 'reducers';
 
-export const defaultLocale = 'nb';
-export const SUPPORTED_LOCALES = ['nb', 'en', 'sv'];
+export const defaultLocale = 'fr';
+export const SUPPORTED_LOCALES = ['nb', 'en', 'sv', 'fr'];
 
 export const LOCALE_KEY = 'OT::locale';
 

@@ -17,8 +17,10 @@ const getFlagIcon = (locale: string) => {
       return <SwedenIcon inline />;
     case 'en':
       return <UKIcon inline />;
+    case 'fr':
+      return <p></p>;
     default: {
-      return <NorwayIcon inline />;
+      return <p></p>;
     }
   }
 };
@@ -31,8 +33,10 @@ const getLocaleString = (locale: string): keyof MessagesKey => {
       return 'userMenuMenuItemTextSwedish';
     case 'nb':
       return 'userMenuMenuItemTextNorwegian';
+    case 'fr':
+      return 'userMenuMenuItemTextFrench';
     default:
-      return 'userMenuMenuItemTextNorwegian';
+      return 'userMenuMenuItemTextFrench';
   }
 };
 
