@@ -630,5 +630,6 @@ export const messages: MessagesKey = {
   loading: 'Loading data providers and organizations...',
   availableNext120Days: 'Available next 120 days',
   becomesUnavailableLess120Days: 'Becomes unavailable in less than 120 days',
-  noLongerAvailable: 'No longer available'
+  noLongerAvailable: 'No longer available',
+  chooseTheTime: 'Choose the time'
 };

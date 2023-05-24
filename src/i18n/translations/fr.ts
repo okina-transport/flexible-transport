@@ -203,7 +203,7 @@ export const messages: MessagesKey = {
   journeyPatternsUnsavedChanges: 'Vous avez des changements non enregistrés.',
   journeyPatternsSaveAndContinue: 'Sauvegarder et continuer',
   editorAbout: 'A propos de la ligne',
-  editorFillInformation: 'Un itinéraire décrit le trajet ou la zone empruntée par le service, consitués de zones desservies',
+  editorFillInformation: 'Un itinéraire décrit le trajet ou la zone empruntée par le service, constitués de zones desservies',
   stepperAbout: 'Général',
   stepperJourneyPattern: 'Itinéraire',
   stepperServiceJourney: 'Course',
@@ -540,5 +540,6 @@ export const messages: MessagesKey = {
   loading: 'Chargement des fournisseurs de données et des organisations...',
   availableNext120Days: 'Disponible les 120 prochains jours',
   becomesUnavailableLess120Days: 'Devient indisponible dans moins de 120 jours',
-  noLongerAvailable: 'Plus disponible'
+  noLongerAvailable: 'Plus disponible',
+  chooseTheTime: 'Choississez l\'heure'
 };

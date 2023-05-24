@@ -626,5 +626,6 @@ export const messages = {
   loading: 'Laster inn dataleverandører og organisasjoner...',
   availableNext120Days: 'Tilgjengelig de neste 120 dagene',
   becomesUnavailableLess120Days: 'Blir utilgjengelig på mindre enn 120 dager',
-  noLongerAvailable: 'Ikke lenger tilgjengelig'
+  noLongerAvailable: 'Ikke lenger tilgjengelig',
+  chooseTheTime: 'Velg tid'
 };

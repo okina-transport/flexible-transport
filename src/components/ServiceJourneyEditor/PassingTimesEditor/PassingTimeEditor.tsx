@@ -109,6 +109,7 @@ export const PassingTimeEditor = ({
       )}
 
       <TimePicker
+        placeholder={formatMessage('chooseTheTime')}
         disabled={index === 0 && type === PassingTimeType.NORMAL}
         label={`${formatMessage(arrivalLabel)}${isLast ? ' *' : ''}`}
         className="timepicker"
@@ -141,6 +142,7 @@ export const PassingTimeEditor = ({
         }
       />
       <TimePicker
+        placeholder={formatMessage('chooseTheTime')}
         disabled={isLast && type === PassingTimeType.NORMAL}
         label={`${formatMessage(departureLabel)}${index === 0 ? ' *' : ''}`}
         className="timepicker"

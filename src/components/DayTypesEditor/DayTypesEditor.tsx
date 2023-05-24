@@ -37,6 +37,7 @@ export const DayTypesEditor = ({
     <>
       <div style={{ display: 'flex', alignItems: 'end' }}>
         <MultiSelect
+          placeholder={formatMessage('defaultOption')}
           label={formatMessage('dayTypesEditorSelectLabel')}
           items={() =>
             allDayTypesData?.dayTypes.map((dt) => ({
