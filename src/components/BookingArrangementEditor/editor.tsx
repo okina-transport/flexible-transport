@@ -246,6 +246,7 @@ export default (props: Props) => {
             label={formatMessage(
               'bookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel'
             )}
+            placeholder={formatMessage('chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel')}
             disabled={bookingLimitType !== BOOKING_LIMIT_TYPE.TIME}
             selectedTime={latestbookingTimeAsDate}
             onChange={(date: Date | null) => {

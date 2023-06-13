@@ -624,5 +624,7 @@ export const messages = {
   loading: 'Laddar dataleverantörer och organisationer...',
   availableNext120Days: 'Tillgänglig kommande 120 dagar',
   becomesUnavailableLess120Days: 'Blir otillgänglig på mindre än 120 dagar',
-  noLongerAvailable: 'Inte längre tillgänglig'
+  noLongerAvailable: 'Inte längre tillgänglig',
+  chooseFlexibleStopAreaType: 'Välj en stopptyp',
+  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Välj tid'
 };

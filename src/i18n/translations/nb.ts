@@ -627,5 +627,7 @@ export const messages = {
   availableNext120Days: 'Tilgjengelig de neste 120 dagene',
   becomesUnavailableLess120Days: 'Blir utilgjengelig på mindre enn 120 dager',
   noLongerAvailable: 'Ikke lenger tilgjengelig',
-  chooseTheTime: 'Velg tid'
+  chooseTheTime: 'Velg tid',
+  chooseFlexibleStopAreaType: 'Velg en stopptype',
+  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Velg tid'
 };

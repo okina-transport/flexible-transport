@@ -541,5 +541,7 @@ export const messages: MessagesKey = {
   availableNext120Days: 'Disponible les 120 prochains jours',
   becomesUnavailableLess120Days: 'Devient indisponible dans moins de 120 jours',
   noLongerAvailable: 'Plus disponible',
-  chooseTheTime: 'Choississez l\'heure'
+  chooseTheTime: 'Choisissez l\'heure',
+  chooseFlexibleStopAreaType: 'Choisissez un type d\'arrêt',
+  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Choisissez l\'heure'
 };

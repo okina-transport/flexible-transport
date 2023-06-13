@@ -286,6 +286,7 @@ const FlexibleStopPlaceEditor = ({
 
                 <Dropdown
                   label={formatMessage('flexibleStopAreaType')}
+                  placeholder={formatMessage('chooseFlexibleStopAreaType')}
                   items={Object.values(FLEXIBLE_STOP_AREA_TYPE).map((v) => ({
                     value: v,
                     label: formatMessage(flexibleStopAreaTypeMessages[v]),
