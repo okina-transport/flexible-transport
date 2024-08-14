@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { RouteComponentProps } from 'react-router';
 import {
   DataCell,
@@ -17,10 +17,10 @@ import { selectIntl } from 'i18n';
 import './styles.scss';
 import { GlobalState } from 'reducers';
 import { Network } from 'model/Network';
-import { AddIcon } from '@entur/icons';
+
 import { SecondaryButton, SuccessButton } from '@entur/button';
 import ConfirmDialog from '../../components/ConfirmDialog';
-import DeleteButton from '../../components/DeleteButton/DeleteButton';
+
 import { Organisation } from 'model/Organisation';
 
 const Networks = ({ history }: RouteComponentProps) => {
@@ -29,7 +29,7 @@ const Networks = ({ history }: RouteComponentProps) => {
     undefined
   );
   const { formatMessage } = useSelector(selectIntl);
-  const { providers, organisations, networks } = useSelector<
+  const { providers, companies, networks } = useSelector<
     GlobalState,
     GlobalState
   >((s) => s);
@@ -39,43 +39,27 @@ const Networks = ({ history }: RouteComponentProps) => {
     dispatch(loadNetworks());
   }, [dispatch, providers.active]);
 
-  const handleOnRowClick = useCallback(
-    (id) => {
-      history.push(`/networks/edit/${id}`);
-    },
-    [history]
-  );
-
   const RenderTableRows = ({
     networkList,
-    organisationList,
+    companyList,
   }: {
     networkList: Network[];
-    organisationList: Organisation[];
+    companyList: Organisation[];
   }) => (
     <>
       {networkList.map((n) => (
         <TableRow
           key={n.id}
-          onClick={() => handleOnRowClick(n.id)}
+          //onClick={() => handleOnRowClick(n.id)}
           title={n.description}
         >
           <DataCell>{n.name}</DataCell>
           <DataCell>{n.privateCode}</DataCell>
           <DataCell>
-            {organisationList.find((o) => o.id === n.authorityRef)?.name
-              ?.value ?? '-'}
+            {companyList.find((o) => o.id === n.authorityRef)?.name?.value ??
+              '-'}
           </DataCell>
-          <DataCell className="delete-row-cell">
-            <DeleteButton
-              onClick={() => {
-                setSelectedNetwork(n);
-                setShowDeleteDialogue(true);
-              }}
-              title=""
-              thin
-            />
-          </DataCell>
+          <DataCell className="delete-row-cell"></DataCell>
         </TableRow>
       ))}
       {networkList.length === 0 && (
@@ -87,19 +71,17 @@ const Networks = ({ history }: RouteComponentProps) => {
       )}
     </>
   );
-
   return (
     <div className="networks">
       <Heading1>{formatMessage('networksHeaderText')}</Heading1>
-
-      <SecondaryButton className="create" as={Link} to="/networks/create">
-        <AddIcon />
-        {formatMessage('editorCreateNetworkHeaderText')}
-      </SecondaryButton>
+      <br />
+      <div>{formatMessage('networksInfoMessage')}</div>
+      <br />
+      <br />
 
       <Loading
         text={formatMessage('networksLoadingNetworksText')}
-        isLoading={!networks || !organisations}
+        isLoading={!networks || !companies}
       >
         <>
           <Table>
@@ -120,7 +102,7 @@ const Networks = ({ history }: RouteComponentProps) => {
             <TableBody>
               <RenderTableRows
                 networkList={networks!}
-                organisationList={organisations!}
+                companyList={companies!}
               />
             </TableBody>
           </Table>

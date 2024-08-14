@@ -435,6 +435,8 @@ export const messages: MessagesKey = {
   editorSavingNetworkLoadingText: 'Saving network...',
   network: 'network',
   networksHeaderText: 'Networks',
+  networksInfoMessage:
+    "Les réseaux sont automatiquement récupérés depuis l'offre. Ils ne peuvent donc pas être modifiés depuis l'application de TAD zonal",
   networksLoadingNetworksText: 'Loading networks...',
   networksNameTableHeaderLabel: 'Name',
   networksNoNetworksFoundText: 'No networks found',
@@ -633,5 +635,6 @@ export const messages: MessagesKey = {
   noLongerAvailable: 'No longer available',
   chooseTheTime: 'Choose the time',
   chooseFlexibleStopAreaType: 'Choose a stop type',
-  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Choose the time'
+  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel:
+    'Choose the time',
 };

@@ -29,6 +29,8 @@ import { PassingTimeTypeDrawer } from './PassingTimesEditor/PassingTimeTypeDrawe
 import { DayTypesEditor } from 'components/DayTypesEditor/DayTypesEditor';
 import { filterNetexOperators } from 'model/Organisation';
 import { useConfig } from 'config/ConfigContext';
+import { CompanyState } from '../../reducers/companies';
+import { getOperators } from '../../model/Company';
 
 type Props = {
   serviceJourney: ServiceJourney;
@@ -65,6 +67,10 @@ const ServiceJourneyEditor = (props: Props) => {
   const organisations = useSelector<GlobalState, OrganisationState>(
     (state) => state.organisations
   );
+
+  const companies = useSelector<GlobalState, CompanyState>(
+    (state) => state.companies
+  );
   const { formatMessage } = useSelector(selectIntl);
 
   const [openPassingTimeTypeDrawer, setOpenPassingTimeTypeDrawer] =
@@ -79,10 +85,7 @@ const ServiceJourneyEditor = (props: Props) => {
 
   const config = useConfig();
 
-  const operators = filterNetexOperators(
-    organisations ?? [],
-    config.enableLegacyOrganisationsFilter
-  );
+  const operators = getOperators(companies ?? []);
 
   const onFieldChange = <T extends keyof ServiceJourney>(
     field: T,

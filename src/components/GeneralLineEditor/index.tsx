@@ -109,6 +109,10 @@ export default <T extends Line>({
 
   const getNetworkItems = useCallback(() => mapToItems(networks), [networks]);
 
+  function getNetworkFromId(value: string | undefined) {
+    return networks.find((network) => network.id === value);
+  }
+
   return (
     <div className="lines-editor-general">
       <Heading1> {formatMessage('editorAbout')}</Heading1>
@@ -201,6 +205,7 @@ export default <T extends Line>({
             onChange<Line>({
               ...(line as Line),
               networkRef: element?.value,
+              network: getNetworkFromId(element?.value),
             })
           }
           {...getErrorFeedback(

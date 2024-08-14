@@ -553,3 +553,24 @@ export const getOrganisationsQuery = `
     }
   }
 `;
+
+export const getCompaniesQuery = `
+  query CompaniesQuery {
+    companies {
+      id
+      name { value }
+      legalName { value }
+      contactDetails {
+        email
+        phone
+        url
+      }
+      keyList {
+        keyValue {
+          key
+          value
+        }
+      }
+    }
+  }
+`;

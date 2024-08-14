@@ -432,6 +432,8 @@ export const messages = {
   editorSavingNetworkLoadingText: 'Lagrer nettverket...',
   network: 'nettverk',
   networksHeaderText: 'Nettverk',
+  networksInfoMessage:
+    "Les réseaux sont automatiquement récupérés depuis l'offre. Ils ne peuvent donc pas être modifiés depuis l'application de TAD zonal",
   networksLoadingNetworksText: 'Laster inn nettverk...',
   networksNameTableHeaderLabel: 'Navn',
   networksNoNetworksFoundText: 'Ingen nettverk ble funnet',
@@ -629,5 +631,5 @@ export const messages = {
   noLongerAvailable: 'Ikke lenger tilgjengelig',
   chooseTheTime: 'Velg tid',
   chooseFlexibleStopAreaType: 'Velg en stopptype',
-  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Velg tid'
+  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Velg tid',
 };

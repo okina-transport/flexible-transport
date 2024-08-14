@@ -17,6 +17,7 @@ import './styles.scss';
 import { GlobalState } from 'reducers';
 import { AppIntlState, selectIntl } from 'i18n';
 import { useConfig } from 'config/ConfigContext';
+import { getCompanies } from '../../actions/companies';
 
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
@@ -39,6 +40,10 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getOrganisations());
+  }, [dispatch, providers.active]);
+
+  useEffect(() => {
+    dispatch(getCompanies());
   }, [dispatch, providers.active]);
 
   const { formatMessage } = useSelector<GlobalState, AppIntlState>(selectIntl);

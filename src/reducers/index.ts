@@ -11,11 +11,13 @@ import flexibleStopPlaces, {
 import editor, { EditorState } from './editor';
 import { AppIntlState } from 'i18n';
 import config, { ConfigState } from './config';
+import companies, { CompanyState } from './companies';
 
 export type GlobalState = {
   notification: NotificationState;
   auth: AuthState;
   organisations: OrganisationState;
+  companies: CompanyState;
   providers: ProvidersState;
   exports: ExportsState;
   networks: NetworksState;
@@ -30,6 +32,7 @@ const reducers = {
   notification,
   auth,
   organisations,
+  companies,
   providers,
   exports,
   networks,

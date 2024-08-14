@@ -35,11 +35,14 @@ import { useConfig } from 'config/ConfigContext';
 const getCurrentNetwork = (
   state: GlobalState,
   match: { params: MatchParams }
-): Network =>
-  state.networks?.find((network) => network.id === match.params.id) ?? {
-    name: '',
-    authorityRef: '',
-  };
+): Network => {
+  return (
+    state.networks?.find((network) => network.id === match.params.id) ?? {
+      name: '',
+      authorityRef: '',
+    }
+  );
+};
 
 const NetworkEditor = ({
   match,
@@ -52,6 +55,7 @@ const NetworkEditor = ({
   const organisations = useSelector<GlobalState, OrganisationState>(
     ({ organisations }) => organisations
   );
+
   const lines = useSelector<GlobalState, FlexibleLinesState>(
     ({ flexibleLines }) => flexibleLines
   );
@@ -76,6 +80,7 @@ const NetworkEditor = ({
   );
 
   const onFieldChange = (field: keyof Network, value: string) => {
+    debugger;
     setNetwork({ ...network, [field]: value });
   };
 
@@ -109,6 +114,7 @@ const NetworkEditor = ({
   };
 
   const handleAuthoritySelectionChange = (authoritySelection: string) => {
+    debugger;
     setNetwork({
       ...network,
       authorityRef: authoritySelection,

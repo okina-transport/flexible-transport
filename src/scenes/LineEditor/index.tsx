@@ -9,7 +9,7 @@ import Loading from 'components/Loading';
 import { isBlank } from 'helpers/forms';
 import { DELETE_LINE, MUTATE_LINE } from 'api/uttu/mutations';
 import { GlobalState } from 'reducers';
-import { filterNetexOperators, filterAuthorities } from 'model/Organisation';
+import { filterNetexOperators } from 'model/Organisation';
 import { setSavedChanges } from 'actions/editor';
 import {
   validLine,
@@ -39,10 +39,7 @@ export default () => {
   const [showConfirm, setShowConfirm] = useState<boolean>(false);
 
   const dispatch = useDispatch<any>();
-  const { organisations, editor, providers } = useSelector<
-    GlobalState,
-    GlobalState
-  >((s) => s);
+  const { editor, companies } = useSelector<GlobalState, GlobalState>((s) => s);
 
   const { line, setLine, refetchLine, loading, error, networks, notFound } =
     useLine();
@@ -114,13 +111,7 @@ export default () => {
 
   const config = useConfig();
 
-  const authoritiesMissing =
-    organisations &&
-    filterAuthorities(
-      organisations,
-      providers.active,
-      config.enableLegacyOrganisationsFilter
-    ).length === 0;
+  const authoritiesMissing = companies == null;
 
   return (
     <Page
@@ -157,7 +148,7 @@ export default () => {
                 line={line!}
                 changeLine={onChange}
                 operators={filterNetexOperators(
-                  organisations ?? [],
+                  companies ?? [],
                   config.enableLegacyOrganisationsFilter
                 )}
                 networks={networks || []}
