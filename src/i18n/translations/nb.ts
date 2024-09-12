@@ -462,6 +462,7 @@ export const messages = {
   validateFormErrorFlexibleAreaNotEnoughPolygons:
     'Du må legge til flere punkter i kartet',
   validateFormErrorNameEmpty: 'Du må gi stoppestedet et navn',
+  validateFormErrorStopAreaTypeEmpty: 'Du må velge en type',
   stopPlaceText: 'fleksibelt stoppested',
   stopPlace: 'Fleksibelt stoppested *',
   stopPlacesHeader: 'Fleksible stoppesteder',
@@ -587,7 +588,7 @@ export const messages = {
   newNoticeLabel: 'Ny notice',
   deleteNoticeTooltip: 'Slett notice',
   addNoticeTooltip: 'Legg til notice',
-  flexibleStopAreaType: 'Stoppestedstype',
+  flexibleStopAreaType: 'Stoppestedstype *',
   flexibleStopAreaTypeNotSet: 'Ikke valgt',
   flexibleStopAreaTypeUnrestrictedRoadNetwork: 'Hvor som helst i polygonet',
   flexibleStopAreaTypeUnrestrictedPublicTransportAreas:

@@ -459,6 +459,7 @@ export const messages = {
   validateFormErrorFlexibleAreaNotEnoughPolygons:
     'Du måste lägga till flera punkter i kartan',
   validateFormErrorNameEmpty: 'Du måste ge hållplatsen ett namn',
+  validateFormErrorStopAreaTypeEmpty: 'Du måste välja en typ',
   stopPlaceText: 'flexibel hållplats',
   stopPlace: 'Flexibel hållplats *',
   stopPlacesHeader: 'Flexibla hållplatser',
@@ -583,7 +584,7 @@ export const messages = {
   newNoticeLabel: 'Ny notice',
   deleteNoticeTooltip: 'Ta bort notice',
   addNoticeTooltip: 'Lägg till notice',
-  flexibleStopAreaType: 'Hållplatstyp',
+  flexibleStopAreaType: 'Hållplatstyp *',
   flexibleStopAreaTypeNotSet: 'inte valt',
   flexibleStopAreaTypeUnrestrictedRoadNetwork: 'Var som helst i polygonen',
   flexibleStopAreaTypeUnrestrictedPublicTransportAreas:
@@ -626,5 +627,5 @@ export const messages = {
   becomesUnavailableLess120Days: 'Blir otillgänglig på mindre än 120 dagar',
   noLongerAvailable: 'Inte längre tillgänglig',
   chooseFlexibleStopAreaType: 'Välj en stopptyp',
-  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Välj tid'
+  chooseBookingLimitFieldsBookingLimitTypeTimeRadioButtonLabel: 'Välj tid',
 };

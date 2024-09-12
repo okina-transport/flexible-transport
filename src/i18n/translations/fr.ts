@@ -472,6 +472,7 @@ export const messages: MessagesKey = {
   validateFormErrorFlexibleAreaNotEnoughPolygons:
     'Vous devez ajouter un ou des points sur la carte',
   validateFormErrorNameEmpty: 'Vous devez entrer un nom',
+  validateFormErrorStopAreaTypeEmpty: 'Vous devez choisir un type',
   stopPlacesHeader: "Zones d'arrêt",
   stopPlacesLoadingStopPlacesText: "Chargement des points d'arrêts...",
   stopPlacesNameTableHeaderLabelText: 'Nom',
@@ -589,7 +590,7 @@ export const messages: MessagesKey = {
   newNoticeLabel: 'Nouvelle remarque',
   deleteNoticeTooltip: 'Supprimer remarque',
   addNoticeTooltip: 'Ajouter remarque',
-  flexibleStopAreaType: "Type d'arrêt",
+  flexibleStopAreaType: "Type d'arrêt *",
   flexibleStopAreaTypeNotSet: "Pas d'ensemble",
   flexibleStopAreaTypeUnrestrictedRoadNetwork: "N'importe où dans le polygone",
   flexibleStopAreaTypeUnrestrictedPublicTransportAreas:

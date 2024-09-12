@@ -58,6 +58,8 @@ export const getInternationalizedUttuError = (
     }
 
     return intl.formatMessage(errorMessage);
+  } else {
+    return error?.message?.toString();
   }
 
   sentryCaptureException(e);

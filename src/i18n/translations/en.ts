@@ -468,6 +468,7 @@ export const messages: MessagesKey = {
   validateFormErrorFlexibleAreaNotEnoughPolygons:
     'You must add more map points',
   validateFormErrorNameEmpty: 'You must enter a name',
+  validateFormErrorStopAreaTypeEmpty: 'You must choose a type',
   stopPlacesHeader: 'Flexible stop places',
   stopPlacesLoadingStopPlacesText: 'Loading stop places...',
   stopPlacesNameTableHeaderLabelText: 'Name',
@@ -591,7 +592,7 @@ export const messages: MessagesKey = {
   newNoticeLabel: 'New notice',
   deleteNoticeTooltip: 'Delete notice',
   addNoticeTooltip: 'Add notice',
-  flexibleStopAreaType: 'Stop place type',
+  flexibleStopAreaType: 'Stop place type *',
   flexibleStopAreaTypeNotSet: 'Not set',
   flexibleStopAreaTypeUnrestrictedRoadNetwork: 'Anywhere within polygon',
   flexibleStopAreaTypeUnrestrictedPublicTransportAreas:

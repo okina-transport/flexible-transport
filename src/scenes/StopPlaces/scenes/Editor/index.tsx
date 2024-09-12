@@ -94,10 +94,11 @@ const FlexibleStopPlaceEditor = ({
     coordinatesToText(polygonCoordinates)
   );
 
-  const { name, flexibleArea } = flexibleStopPlace ?? {};
+  const { name, flexibleArea, keyValues } = flexibleStopPlace ?? {};
 
   const namePristine = usePristine(name, saveClicked);
   const areaPristine = usePristine(flexibleArea, saveClicked);
+  const stopAreaTypePristine = usePristine(keyValues, saveClicked);
 
   const errors = validateFlexibleStopPlace(flexibleStopPlace ?? {});
 
@@ -296,6 +297,13 @@ const FlexibleStopPlaceEditor = ({
                       (v) => v.key === 'FlexibleStopAreaType'
                     )?.values[0] ?? null
                   }
+                  {...getErrorFeedback(
+                    errors.flexibleStopAreaType
+                      ? formatMessage(errors.flexibleStopAreaType)
+                      : '',
+                    !errors.flexibleStopAreaType,
+                    stopAreaTypePristine
+                  )}
                   onChange={(selectedItem: NormalizedDropdownItemType | null) =>
                     selectedItem &&
                     setFlexibleStopPlace({
