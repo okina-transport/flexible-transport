@@ -34,27 +34,29 @@ async function init(props) {
   };
 
   let kc = new Keycloak(keycloakConfig);
-  kc.init({ onLoad: 'login-required', checkLoginIframe: false }).then(
-    async (authenticated) => {
-      if (authenticated) {
-        const roles = kc.tokenParsed.roles.map((r) => JSON.parse(r).r);
-        const userInfo = await kc.loadUserInfo();
-        //console.log(userInfo);
-        console.log(roles); // ['adminEditRouteData', 'editStops', 'deleteStops']
-        kc = {
-          ...kc,
-          getAccessToken: function () {
-            return kc.token;
-          },
-          isAuthenticated: authenticated,
-          isLoading: false,
-          roleAssignments: roles,
-          user: { name: userInfo.preferred_username },
-        };
-        renderIndex(kc, config);
-      }
+  kc.init({
+    onLoad: 'login-required',
+    checkLoginIframe: false,
+    useNonce: false,
+  }).then(async (authenticated) => {
+    if (authenticated) {
+      const roles = kc.tokenParsed.roles.map((r) => JSON.parse(r).r);
+      const userInfo = await kc.loadUserInfo();
+      //console.log(userInfo);
+      console.log(roles); // ['adminEditRouteData', 'editStops', 'deleteStops']
+      kc = {
+        ...kc,
+        getAccessToken: function () {
+          return kc.token;
+        },
+        isAuthenticated: authenticated,
+        isLoading: false,
+        roleAssignments: roles,
+        user: { name: userInfo.preferred_username },
+      };
+      renderIndex(kc, config);
     }
-  );
+  });
 }
 
 init(props);
