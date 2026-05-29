@@ -22,7 +22,7 @@ import useRefetchOnLocationChange from 'hooks/useRefetchOnLocationChange';
 import { ExportLineAssociation } from 'model/Export';
 import { useSelector } from 'react-redux';
 import { selectIntl } from 'i18n';
-import {MessagesKey} from "../../i18n/translations/translationKeys";
+import { MessagesKey } from '../../i18n/translations/translationKeys';
 
 type Props = {
   onChange: (lines: ExportLineAssociation[]) => void;
@@ -57,16 +57,21 @@ const union = (left: Availability, right: Availability): Availability => {
 const getAvailability = (journeyPatterns?: JourneyPattern[]): Availability => {
   let availability = { from: new Date(), to: new Date() };
 
+  const DEFAULT_FROM = new Date('2020-01-01');
+  const DEFAULT_TO = new Date('2100-01-01');
+
   journeyPatterns?.forEach((jp) =>
     jp.serviceJourneys.forEach((sj) =>
       sj.dayTypes?.forEach((dt) =>
-        dt.dayTypeAssignments.forEach(
-          (dta) =>
-            (availability = union(availability, {
-              from: parseDate(dta.operatingPeriod.fromDate),
-              to: parseDate(dta.operatingPeriod.toDate),
-            }))
-        )
+        dt.dayTypeAssignments.forEach((dta) => {
+          const period = dta.operatingPeriod;
+          if (!period) return;
+
+          availability = union(availability, {
+            from: period.fromDate ? parseDate(period.fromDate) : DEFAULT_FROM,
+            to: period.toDate ? parseDate(period.toDate) : DEFAULT_TO,
+          });
+        })
       )
     )
   );
