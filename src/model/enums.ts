@@ -235,9 +235,9 @@ export enum DIRECTION_TYPE {
 }
 
 export enum EXPORT_STATUS {
-  IN_PROGRESS = 'in_progress',
+  IN_PROGRESS = 'processing',
   FAILED = 'failed',
-  SUCCESS = 'success',
+  SUCCESS = 'finished',
 }
 
 export enum SEVERITY {

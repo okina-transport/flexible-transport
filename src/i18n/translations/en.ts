@@ -112,8 +112,8 @@ export const messages: MessagesKey = {
   NO_VALID_FLEXIBLE_LINES_IN_DATA_SPACE:
     'No valid flexible lines in data space',
   failed: 'Failed',
-  in_progress: 'In progress',
-  success: 'Success',
+  processing: 'In progress',
+  finished: 'Success',
   viewerFromDateLabel: 'From date',
   viewerHeader: 'Export',
   viewerLoadingText: 'Loading export...',

@@ -1,4 +1,4 @@
-import { IntlProvider } from 'react-intl';
+import { createIntl } from 'react-intl';
 import 'moment/locale/nb';
 import '@formatjs/intl-pluralrules/polyfill';
 import '@formatjs/intl-pluralrules/dist/locale-data/nb';
@@ -59,7 +59,7 @@ let prevLocale = '';
 
 export const getIntl = ({ intl: { locale, messages } }: any): AppIntlState => {
   if (!cachedIntl || locale !== prevLocale) {
-    const intlProvider = new IntlProvider({ locale, messages }).state.intl;
+    const intlProvider = createIntl({ locale, messages });
     cachedIntl = {
       ...intlProvider,
       formatMessage: (messageId: keyof MessagesKey, details?: string) =>

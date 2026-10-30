@@ -115,8 +115,8 @@ export const messages: MessagesKey = {
   NO_VALID_FLEXIBLE_LINES_IN_DATA_SPACE:
     "Pas de lignes TAD valides dans l'espace de données",
   failed: 'Echec',
-  in_progress: 'En cours',
-  success: 'Succès',
+  processing: 'En cours',
+  finished: 'Succès',
   viewerFromDateLabel: 'Date de début',
   viewerHeader: 'Export',
   viewerLoadingText: "Chargement de l'export...",
