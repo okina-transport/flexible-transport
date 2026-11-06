@@ -67,6 +67,7 @@ export const loadFlexibleLines =
         await getState().auth.getAccessToken()
       );
       dispatch(receiveFlexibleLinesActionCreator(flexibleLines));
+      return true;
     } catch (e) {
       const intl = getIntl(getState());
       dispatch(
@@ -79,6 +80,7 @@ export const loadFlexibleLines =
         )
       );
       sentryCaptureException(e);
+      return false;
     }
   };
 

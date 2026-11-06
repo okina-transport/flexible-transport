@@ -21,13 +21,14 @@ import { Organisation } from 'model/Organisation';
 
 export type Props = {
   lines?: Line[];
+  loadingError?: boolean;
   organisations: Organisation[];
   onRowClick: (line: Line) => void;
   onDeleteRowClick: (line: Line) => void;
 };
 
 export default (props: Props) => {
-  const { lines } = props;
+  const { lines, loadingError } = props;
 
   const { formatMessage } = useSelector(selectIntl);
 
@@ -41,8 +42,13 @@ export default (props: Props) => {
   const operatorTableHeader = formatMessage('linesOperatorTableHeader');
   const noLinesFoundText = formatMessage('linesNoLinesFoundText');
   const loadingText = formatMessage('linesLoadingText');
+  const loadingErrorText = formatMessage('linesLoadingErrorText');
 
   const renderTableBody = () => {
+    if (!lines && loadingError) {
+      return renderLoadingError(loadingErrorText);
+    }
+
     if (!lines) {
       return renderLoading(loadingText);
     }
@@ -74,6 +80,14 @@ const renderNoLinesFound = (noLinesFoundText: string) => {
   return (
     <TableRow className="row-no-lines disabled">
       <DataCell colSpan={3}>{noLinesFoundText}</DataCell>
+    </TableRow>
+  );
+};
+
+const renderLoadingError = (loadingErrorText: string) => {
+  return (
+    <TableRow className="row-no-lines disabled">
+      <DataCell colSpan={3}>{loadingErrorText}</DataCell>
     </TableRow>
   );
 };

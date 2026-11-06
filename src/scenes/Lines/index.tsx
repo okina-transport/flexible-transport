@@ -73,6 +73,7 @@ export default () => {
 
       <LinesTable
         lines={done ? data && data.lines : undefined}
+        loadingError={done && !!error}
         organisations={organisations!}
         onRowClick={handleOnRowClick}
         onDeleteRowClick={setLineSelectedForDeletion}

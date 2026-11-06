@@ -393,6 +393,7 @@ export const messages = {
   serviceJourneydeleteMessage:
     'Er du sikker på at du ønsker å slette denne service journeyen?',
   linesLoadingText: 'Laster inn linjer...',
+  linesLoadingErrorText: 'Linjene kunne ikke lastes inn.',
   linesNameTableHeaderLabel: 'Navn',
   linesNoLinesFoundText: 'Ingen linjer ble funnet.',
   linesOperatorTableHeader: 'Operatør',

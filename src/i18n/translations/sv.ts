@@ -393,6 +393,7 @@ export const messages = {
   serviceJourneydeleteMessage:
     'Är du säker på att du vill ta bort denna service journey?',
   linesLoadingText: 'Läser in linjer...',
+  linesLoadingErrorText: 'Linjerna kunde inte hämtas.',
   linesNameTableHeaderLabel: 'Namn',
   linesNoLinesFoundText: 'Inga linjer hittades.',
   linesOperatorTableHeader: 'Operatör',

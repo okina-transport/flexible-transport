@@ -16,6 +16,7 @@ import LinesTable from 'components/LinesTable';
 
 export default () => {
   const [showDeleteDialogue, setShowDeleteDialogue] = useState<boolean>(false);
+  const [loadingError, setLoadingError] = useState<boolean>(false);
   const [selectedLine, setSelectedLine] = useState<FlexibleLine | undefined>(
     undefined
   );
@@ -29,7 +30,9 @@ export default () => {
   const dispatch = useDispatch<any>();
 
   useEffect(() => {
-    dispatch(loadFlexibleLines());
+    dispatch(loadFlexibleLines()).then((loaded: boolean) =>
+      setLoadingError(!loaded)
+    );
   }, [dispatch]);
 
   const history = useHistory();
@@ -58,6 +61,7 @@ export default () => {
 
       <LinesTable
         lines={lines!}
+        loadingError={loadingError}
         organisations={operator!}
         onRowClick={handleOnRowClick}
         onDeleteRowClick={handleOnRowDeleteClick}

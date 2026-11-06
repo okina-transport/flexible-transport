@@ -402,6 +402,7 @@ export const messages: MessagesKey = {
   serviceJourneydeleteMessage:
     'Etes vous sûr de vouloir supprimer ce parcours ?',
   linesLoadingText: 'Chargement des lignes...',
+  linesLoadingErrorText: 'Impossible de charger les lignes.',
   linesNameTableHeaderLabel: 'Nom',
   linesNoLinesFoundText: 'Aucune ligne trouvée.',
   linesOperatorTableHeader: 'Opérateur',

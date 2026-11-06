@@ -398,6 +398,7 @@ export const messages: MessagesKey = {
   serviceJourneydeleteMessage:
     'Are you sure you want to delete this service journey?',
   linesLoadingText: 'Loading lines...',
+  linesLoadingErrorText: 'Lines could not be loaded.',
   linesNameTableHeaderLabel: 'Name',
   linesNoLinesFoundText: 'No lines found.',
   linesOperatorTableHeader: 'Operator',
